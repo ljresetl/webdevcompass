@@ -1,0 +1,112 @@
+
+
+export const projects = [
+  {
+    title: "projectAmondrexTitle",
+    description: "projectAmondrexDescription",
+    image: "/-5.webp",
+    technologies: ["React", "TypeScript", "JS"],
+    github: "https://github.com/ljresetl/fond-amondrex",
+    website: "https://www.amondrexcf.com/",
+    featured: true,   // ← ПОКАЗАТИ НА ЛЕНДИНГУ
+  },
+  {
+    title: "projectKeyboardTitle",
+    description: "projectKeyboardDescription",
+    image: "/-4.webp",
+    technologies: ["HTML", "CSS", "JS"],
+    github: "https://github.com/ljresetl/game-for-you",
+    website: "https://game-for-you-tawny.vercel.app/",
+    featured: false,   // ← ПОКАЗАТИ НА ЛЕНДИНГУ
+  },
+  {
+    title: "projectMoviesTitle",
+    description: "projectMoviesDescription",
+    image: "/-3.webp",
+    technologies: ["React", "TypeScript", "JS"],
+    github: "https://github.com/ljresetl/03-react-movies",
+    website: "https://03-react-movies-one-liard.vercel.app/",
+    featured: false,   // ← ПОКАЗАТИ НА ЛЕНДИНГУ
+  },
+  {
+    title: "projectMusicAppTitle",
+    description: "projectMusicAppDescription",
+    image: "/-2.webp",
+    technologies: ["HTML", "CSS", "JS"],
+    github: "https://github.com/pattaroni/project-Dev4L1fe",
+    website: "https://pattaroni.github.io/project-Dev4L1fe/",
+    featured: false,
+  },
+  {
+    title: "projectMusicPortfolioTitle",
+    description: "projectMusicPortfolioDescription",
+    image: "/-1.webp",
+    technologies: ["HTML", "CSS", "JS"],
+    github: "https://github.com/ljresetl/New-Single-Dj",
+    website: "https://ljresetl.github.io/New-Single-Dj/",
+    featured: false,
+  },
+  {
+    title: "projectFinancialTitle",
+    description: "projectFinancialDescription",
+    image: "/foto1.webp",
+    technologies: ["HTML", "CSS", "JS"],
+    github: "https://github.com/ljresetl/financial_consulting",
+    website: "https://ljresetl.github.io/financial_consulting/",
+    featured: false,
+  },
+  {
+    title: "projectCinemaTitle",
+    description: "projectCinemaDescription",
+    image: "/kino411.webp",
+    technologies: ["HTML", "CSS", "JS"],
+    github: "https://github.com/ljresetl/kino2",
+    website: "https://ljresetl.github.io/kino2/",
+    featured: false,
+  },
+  {
+    title: "projectBarbershopTitle",
+    description: "projectBarbershopDescription",
+    image: "/priklad3-411x350.webp",
+    technologies: ["HTML", "CSS", "JS"],
+    github: "https://github.com/ljresetl/barbershop",
+    website: "https://ljresetl.github.io/barbershop/",
+    featured: false,
+  },
+  {
+    title: "projectWebStudioTitle",
+    description: "projectWebStudioDescription",
+    image: "/maket411.webp",
+    technologies: ["HTML", "CSS", "JS"],
+    github: "https://github.com/ljresetl/PRODUCT-business",
+    website: "https://ljresetl.github.io/PRODUCT-business/",
+    featured: false,
+  },
+  {
+    title: "projectYachtsTitle",
+    description: "projectYachtsDescription",
+    image: "/projekt411x266.webp",
+    technologies: ["HTML", "CSS", "JS"],
+    github: "https://github.com/ljresetl/team-work-yachtjet",
+    website: "https://ljresetl.github.io/team-work-yachtjet/",
+    featured: true,   // ← ПОКАЗАТИ НА ЛЕНДИНГУ
+  },
+  {
+    title: "projectWeatherTitle",
+    description: "projectWeatherDescription",
+    image: "/fotoýproject.webp",
+    technologies: ["HTML", "CSS", "JS"],
+    github: "https://github.com/ljresetl/weather-html-css-js",
+    website: "https://ljresetl.github.io/weather-html-css-js/",
+    featured: true,   // ← ПОКАЗАТИ НА ЛЕНДИНГУ
+  },
+  {
+    title: "projectSWESTitle",
+    description: "projectSWESDescription",
+    image: "/priklad8.webp",
+    technologies: ["HTML", "CSS", "JS"],
+    github: "https://github.com/ljresetl/SWES-Reservation-Module",
+    website: "https://ljresetl.github.io/SWES-Reservation-Module/",
+    featured: false,
+  },
+];

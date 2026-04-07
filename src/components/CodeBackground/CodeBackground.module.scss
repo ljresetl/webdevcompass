@@ -1,0 +1,57 @@
+.code_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+  
+  // Додаємо моноширинний шрифт для ефекту коду
+  font-family: 'Fira Code', 'Manrope', monospace;
+  font-size: 14px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 40px;
+
+  /* --- ОБРАНИЙ КОЛІР (Slate Blue) --- */
+  color: #64748b; 
+  /* ---------------------------------- */
+  
+  opacity: 0;
+  // Плавна поява + нахил
+  transform: skewY(-2deg);
+  transform-origin: top left;
+  transition: opacity 2s ease-in-out;
+
+  // Маска для м'якого зникнення тексту внизу
+  mask-image: linear-gradient(to bottom, black 30%, transparent 95%);
+  -webkit-mask-image: linear-gradient(to bottom, black 30%, transparent 95%);
+
+  &.visible {
+    opacity: 0.15; // Підвищили яскравість для нового кольору
+    animation: scrollText 120s linear infinite; // Дуже повільний рух вгору
+  }
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateY(0) skewY(-2deg);
+  }
+  to {
+    transform: translateY(-30%) skewY(-2deg);
+  }
+}
+
+/* Оптимізація для мобільних пристроїв */
+@media (max-width: 768px) {
+  .code_bg {
+    font-size: 11px;
+    padding: 20px;
+    &.visible {
+      opacity: 0.1; // На мобільних робимо трохи блідіше, щоб не відволікати
+    }
+  }
+}

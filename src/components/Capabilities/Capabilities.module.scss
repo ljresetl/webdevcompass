@@ -1,0 +1,128 @@
+.capabilities {
+  padding: 24px 0;
+  font-family: "Manrope", sans-serif; 
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 16px;
+    gap: 12px;
+    text-align: left;
+
+    @media screen and (min-width: 1280px) {
+      flex-direction: row;
+      padding: 0 30px;
+      gap: 40px;
+    }
+  }
+
+  .capabilities_h {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.1;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+
+    @media screen and (min-width: 768px) {
+      font-size: 42px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      flex: 1;
+      font-size: 48px;
+    }
+  }
+}
+
+.capabilities_right {
+  @media screen and (min-width: 1280px) {
+    flex: 1;
+  }
+
+  .capabilities_p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-color);
+    opacity: 0.8; 
+    margin-bottom: 24px;
+    transition: color 0.3s ease, opacity 0.3s ease;
+
+    @media screen and (min-width: 768px) {
+      font-size: 20px;
+      margin-bottom: 28px;
+    }
+  }
+}
+
+.capabilities_ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; // 🔹 Центр на мобільному
+  gap: 12px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: flex-start; // 🔹 Вліво на планшеті/десктопі
+    gap: 16px;
+  }
+
+  .capabilities_li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--text-color);
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 100px;
+    padding: 12px 20px;
+    transition:
+      color 0.3s ease,
+      border-color 0.3s ease,
+      background-color 0.3s ease;
+
+    @media screen and (min-width: 768px) {
+      padding: 14px 24px;
+      font-size: 15px;
+    }
+
+    &:hover {
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+    }
+  }
+}
+
+.capabilities_skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center; // 🔹 Центр на мобільному
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    justify-content: flex-start; // 🔹 Вліво на десктопі
+  }
+}
+
+// === ГЛОБАЛЬНІ ВІДСТУПИ СЕКЦІЇ ===
+@media (min-width: 768px) {
+  .capabilities {
+    padding: 60px 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .capabilities {
+    padding: 80px 0;
+  }
+}

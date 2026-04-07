@@ -1,0 +1,24 @@
+// 🔧 Цей файл потрібен для того, щоб TypeScript розумів,
+// як працюють імпорти SCSS-модулів (наприклад: import styles from "./App.module.scss";).
+
+// Ми оголошуємо спеціальний модуль для всіх файлів з розширенням .scss
+declare module '*.scss' {
+  // ⬇️ Описуємо, що при імпорті SCSS-модуля ми отримаємо об’єкт.
+  // Ключами цього об’єкта будуть назви CSS-класів,
+  // а значеннями — рядки (згенеровані унікальні імена класів).
+  const content: { [className: string]: string };
+
+  // ⬇️ Експортуємо цей об’єкт як default.
+  // Тобто можна писати: import styles from "./App.module.scss";
+  export default content;
+}
+
+// 🔹 Правильне розширення типів для <img>
+// declare global {
+//   namespace JSX {
+//     interface ImgHTMLAttributes<T> extends React.HTMLAttributes<T> {
+//       fetchpriority?: string;
+//     }
+//   }
+// }
+

@@ -1,0 +1,106 @@
+.foto {
+  padding: 20px 0;
+  background-color: var(--card-bg-color);
+  transition: background-color 0.3s ease;
+
+  .container {
+    display: flex;
+    flex-direction: column; // Мобільна версія: все в один стовпчик
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      flex-direction: row; // Планшет і десктоп: в ряд
+      align-items: stretch; // Вирівнюємо висоту фото і тексту
+      padding: 0 30px;
+      gap: 32px;
+    }
+  }
+
+  .imageWrapper {
+    width: 100%;
+    max-width: 400px; // Обмежуємо ширину на мобільних
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+      flex: 1; // Займає 50% ширини
+      max-width: none;
+    }
+  }
+
+  .my_foto {
+    border-radius: 12px;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    display: block;
+
+    @media (min-width: 1280px) {
+      height: 100%; // На десктопі розтягується на всю висоту контейнера
+      max-height: 600px; // Щоб фото не було занадто довгим
+    }
+  }
+
+  .about_me_text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (min-width: 768px) {
+      flex: 1; // Займає інші 50% ширини
+      justify-content: center;
+    }
+
+    @media (min-width: 1280px) {
+      padding: 20px 0;
+      gap: 20px;
+    }
+
+    .about_me_text_h {
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 1.2;
+      color: var(--text-color);
+      margin: 0;
+
+      @media (min-width: 768px) {
+        font-size: 32px;
+      }
+
+      @media (min-width: 1280px) {
+        font-size: 40px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .about_me_text_p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--text-color);
+      opacity: 0.9;
+      margin: 0;
+
+      @media (min-width: 768px) {
+        font-size: 18px;
+      }
+
+      @media (min-width: 1280px) {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+/* Планшетна та десктопна секція */
+@media (min-width: 768px) {
+  .foto {
+    padding: 60px 0;
+  }
+}

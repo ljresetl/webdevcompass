@@ -1,0 +1,21 @@
+.section {
+  width: 100%;
+  background-color: var(--bg-color); // фон тепер динамічний
+  will-change: transform, opacity;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Анімації */
+.hidden {
+  opacity: 0;
+  transform: translateY(80px);
+}
+
+.slideUp {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}

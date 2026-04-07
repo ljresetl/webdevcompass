@@ -1,0 +1,29 @@
+.footer {
+  width: 100%; /* 🔥 футер тепер на всю ширину */
+  padding: 24px 0;
+  background-color: var(--bg-color); // 🔹 фоновий колір залежно від теми
+  color: var(--text-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.container {
+  max-width: 1200px; /* 🔥 контент футера центрований */
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  @media (min-width: 1280px) {
+    padding: 0 30px;
+  }
+}
+
+.container_footer_p {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}

@@ -1,0 +1,214 @@
+/* ============================
+   HEADER — ОСНОВНИЙ КОНТЕЙНЕР
+   ============================ */
+.header {
+  position: sticky;
+  top: 0;
+  padding: 10px 0;
+  z-index: 1000;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 16px;
+    max-width: 100%;
+
+    @media screen and (min-width: 768px) {
+      justify-content: space-evenly;
+      gap: 20px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      padding: 0 30px;
+    }
+  }
+}
+
+/* ============================
+   ЛОГОТИП
+   ============================ */
+.logo {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--accent-color);
+  padding: 20px 0;
+  transition: color 0.3s ease;
+}
+
+/* ============================
+   НАВІГАЦІЯ (десктоп)
+   ============================ */
+.header_ul {
+  display: none;
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
+// .navigation {
+//   display: none;
+// }
+
+@media screen and (min-width: 1280px) {
+  .navigation {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .ul_navigation_li {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-color);
+      padding: 10px;
+      white-space: nowrap;
+      transition: color 0.3s ease;
+
+      a:hover {
+        color: var(--accent-color);
+      }
+    }
+  }
+}
+
+/* ============================
+   DROPDOWN МОВ
+   ============================ */
+.languageDropdown {
+  position: relative;
+}
+
+.languageMenu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #256835;
+  z-index: 50;
+
+  &:hover {
+    background-color: #40b822;
+  }
+
+  &.active {
+    background-color: #3a4b3d;
+  }
+
+  button {
+    padding: 8px 14px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    color: var(--text);
+
+    &:hover {
+      background: var(--hover);
+    }
+  }
+}
+
+/* ============================
+   ПЕРЕМИКАЧ МОВИ + ТЕМИ
+   ============================ */
+.language_switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto; //штовхає вправо
+  flex-wrap: wrap;
+  gap: 10px;
+
+  @media screen and (min-width: 768px) {
+    // justify-content: flex-end;
+    gap: 20px;
+  }
+
+  .theme_switcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+    color: var(--text-color);
+    // margin-bottom: -30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .language_switcher_button {
+    background-color: #256835;
+    border: none;
+    margin-bottom: 10px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 10px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #40b822;
+    }
+
+    &.active {
+      background-color: #3a4b3d;
+    }
+  }
+}
+
+/* ============================
+   БУРГЕР-МЕНЮ
+   ============================ */
+.burger_menu {
+  background-color: transparent;
+  margin-left: 10px;
+  border: none;
+
+  .burger_menu_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    stroke-width: 2px;
+    stroke: var(--text-color);
+    // stroke: #299813;
+    width: 18px;
+    height: 20px;
+    transition: stroke 0.3s ease;
+
+    @media screen and (min-width: 768px) {
+      margin-left: 20px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}

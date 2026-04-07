@@ -1,0 +1,181 @@
+.connect {
+  padding: 24px 0;
+  background-color: var(--card-bg-color); 
+  color: var(--text-color); 
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  @media (min-width: 768px) {
+    padding: 60px 0; // Уніфікований відступ як в інших секціях
+  }
+  @media (min-width: 1280px) {
+    padding: 80px 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: "Manrope", sans-serif; // Змінено для консистентності
+    margin: 0 auto;
+    padding: 0 16px;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    @media (min-width: 1280px) {
+      padding: 0 30px;
+    }
+  }
+}
+
+.connect_container_one {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: color 0.3s ease;
+
+  @media (min-width: 768px) {
+    flex: 1;
+  }
+
+  .connect_container_one_h {
+    font-weight: 400;
+    // Уніфікація розміру заголовка
+    font-size: 32px; 
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    word-break: break-all;
+
+    @media (min-width: 768px) {
+      font-size: 42px;
+    }
+    @media (min-width: 1280px) {
+      font-size: 48px;
+    }
+  }
+
+  .connect_container_one_p {
+    // Уніфікація тексту (18px моб / 20px десктоп)
+    font-weight: 400;
+    font-size: 18px; 
+    line-height: 1.6;
+    color: var(--text-color);
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+    }
+
+    .connect_span_a,
+    .connect_span_resume {
+      font-family: "Manrope", sans-serif;
+      font-weight: 600; // Трохи жирніше для посилань
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--accent-color);
+      text-decoration-line: underline;
+      text-decoration-color: var(--accent-color);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 2px;
+      transition: color 0.3s ease;
+
+      @media (min-width: 768px) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .connect_svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+
+    @media (min-width: 768px) {
+      justify-content: flex-start;
+    }
+
+    .about_me_svg_link_connect {
+      fill: var(--accent-color);
+      transition: fill 0.3s ease, transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+  }
+}
+
+.connect_container_two {
+  @media (min-width: 768px) {
+    flex: 1;
+  }
+
+  .modal_form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 8px;
+    // Шрифти лейблів/форм
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    font-family: "Manrope", sans-serif;
+    transition: color 0.3s ease;
+
+    .modal_input,
+    .modal_textarea {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.6;
+      font-family: "Manrope", sans-serif;
+      color: var(--text-color);
+      border-radius: 4px;
+      padding: 12px 16px;
+      background-color: var(--li-bg-color);
+      border: 1px solid rgba(128, 128, 128, 0.2); // Легка рамка для полів
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: var(--accent-color);
+      }
+    }
+
+    .modal_textarea {
+      margin-bottom: 24px;
+      height: 148px;
+      resize: none;
+    }
+
+    .modal_button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+      border: none;
+      padding: 16px 40px; // Трохи компактніше по висоті
+      background-color: var(--accent-color);
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1;
+      text-transform: uppercase;
+      color: var(--bg-color);
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}
