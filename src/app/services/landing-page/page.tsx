@@ -1,9 +1,9 @@
 import { Metadata } from "next";
-import LandingPage from "@/components/LandingPage/LandingPage"; // перевір шлях
+import LandingPage from "@/components/LandingPage/LandingPage";
 
 export const metadata: Metadata = {
-  title: "Створення Landing Page | Висока конверсія",
-  description: "Розробка сучасних лендингів на React та Next.js з фокусом на результат.",
+  title: "Landing Page Development | High Conversion",
+  description: "Creation of modern landing pages using React and Next.js with a focus on results and performance.",
 };
 
 export default function Page() {

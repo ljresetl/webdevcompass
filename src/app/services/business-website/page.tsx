@@ -1,10 +1,9 @@
 import { Metadata } from "next";
-// ДОДАЙ ЦЕЙ ІМПОРТ (перевір чи шлях правильний до твого компонента)
 import BusinessWebsite from "@/components/BusinessWebsite/BusinessWebsite"; 
 
 export const metadata: Metadata = {
-  title: "Розробка корпоративних сайтів | Vitalii Baranov",
-  description: "Створення багатосторінкових сайтів для бізнесу та персональних брендів.",
+  title: "Corporate Website Development | Vitalii Baranov",
+  description: "Creation of multi-page websites for business and personal brands with modern architecture.",
 };
 
 export default function BusinessWebsiteRoute() {

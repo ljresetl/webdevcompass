@@ -1,19 +1,36 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useSyncExternalStore } from "react";
 import styles from "./LandingPage.module.scss";
 import BackButton from "@/components/BackButton/BackButton";
+import { useLanguage } from "@/useLanguage";
+
+const subscribe = () => () => {};
+const getSnapshot = () => true;
+const getServerSnapshot = () => false;
 
 const LandingPage: React.FC = () => {
+  const { t } = useLanguage();
+  const isMounted = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+
+  useEffect(() => {
+    if (isMounted) {
+      document.title = t("landTitle");
+    }
+  }, [t, isMounted]);
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handleOrder = (planName: string, price: string, features: string) => {
+  const handleOrder = (planNameKey: string, price: string, featureKeys: string[]) => {
+    const planName = t(planNameKey).replace(/&quot;/g, '"');
+    const features = featureKeys.map(key => t(key)).join(", ");
     const message = `Привіт! Мене зацікавив тариф "${planName}" (${price}).\nВключено: ${features}\nДавайте обговоримо деталі!`;
-    const encodedMessage = encodeURIComponent(message);
-    window.open(`https://t.me/ljresetl?text=${encodedMessage}`, "_blank");
+    window.open(`https://t.me/ljresetl?text=${encodeURIComponent(message)}`, "_blank");
   };
+
+  if (!isMounted) return <section className={styles.page} />;
 
   return (
     <section className={styles.page}>
@@ -22,62 +39,60 @@ const LandingPage: React.FC = () => {
 
         {/* --- HERO SECTION --- */}
         <div className={styles.hero}>
-          <h1 className={styles.title}>Лендинги, що працюють на ваш результат</h1>
-          <p className={styles.subtitle}>
-            Професійна розробка на Next.js: від ідеї та дизайну до технічного запуску.
-          </p>
+          <h1 className={styles.title}>{t("landTitle")}</h1>
+          <p className={styles.subtitle}>{t("landSubtitle")}</p>
           <div className={styles.heroCta}>
             <button className={styles.ctaOutline} onClick={() => scrollToSection('pricing')}>
-              Розрахувати вартість
+              {t("landCalcBtn")}
             </button>
             <button className={styles.ctaOutline} onClick={() => scrollToSection('steps')}>
-              Подивитися етапи
+              {t("landStepsBtn")}
             </button>
           </div>
         </div>
 
         {/* --- WHY ME SECTION --- */}
         <div className={styles.section}>
-          <h2 className={styles.sectionTitle}>Чому варто обрати мене?</h2>
+          <h2 className={styles.sectionTitle}>{t("landWhyTitle")}</h2>
           <div className={styles.featuresGrid}>
             <div className={styles.featureCard}>
               <span className={styles.featureIcon}>🚀</span>
-              <h3>Швидкість & SEO</h3>
-              <p>Next.js забезпечує миттєве завантаження, що підвищує конверсію та позиції в Google.</p>
+              <h3>{t("landFeature1Title")}</h3>
+              <p>{t("landFeature1Desc")}</p>
             </div>
             <div className={styles.featureCard}>
               <span className={styles.featureIcon}>📱</span>
-              <h3>Mobile First</h3>
-              <p>Ідеальне відображення на всіх пристроях: від старих смартфонів до 4K моніторів.</p>
+              <h3>{t("landFeature2Title")}</h3>
+              <p>{t("landFeature2Desc")}</p>
             </div>
             <div className={styles.featureCard}>
               <span className={styles.featureIcon}>🖼️</span>
-              <h3>Оптимізація контенту</h3>
-              <p>Підготовка графіки у форматах WebP/AVIF для збереження якості при мінімальній вазі.</p>
+              <h3>{t("landFeature3Title")}</h3>
+              <p>{t("landFeature3Desc")}</p>
             </div>
           </div>
         </div>
 
         {/* --- STEPS SECTION --- */}
         <div id="steps" className={styles.section}>
-          <h2 className={styles.sectionTitle}>Як відбувається розробка</h2>
+          <h2 className={styles.sectionTitle}>{t("landStepsTitle")}</h2>
           <div className={styles.stepsContainer}>
             <div className={styles.stepColumn}>
-              <h3>Варіант А: У вас є макет (Figma)</h3>
+              <h3>{t("landVariantA")}</h3>
               <ul>
-                <li><strong>Аналіз макета:</strong> Перевірка на технічну реалізовність та адаптивність.</li>
-                <li><strong>Чиста верстка:</strong> Перенесення дизайну в код Pixel-Perfect.</li>
-                <li><strong>Інтерактив:</strong> Додавання анімацій, форм та функціоналу.</li>
-                <li><strong>Запуск:</strong> Деплой на Vercel/Netlify та підключення домену.</li>
+                <li>{t("landStepA1")}</li>
+                <li>{t("landStepA2")}</li>
+                <li>{t("landStepA3")}</li>
+                <li>{t("landStepA4")}</li>
               </ul>
             </div>
             <div className={styles.stepColumn}>
-              <h3>Варіант Б: Розробка з нуля</h3>
+              <h3>{t("landVariantB")}</h3>
               <ul>
-                <li><strong>Брифування:</strong> Обговорення цілей та структури сайту.</li>
-                <li><strong>Дизайн-концепт:</strong> Створення стилістики та підбір шрифтів/кольорів.</li>
-                <li><strong>Контент:</strong> Робота з вашими текстами та оптимізація фото.</li>
-                <li><strong>Розробка:</strong> Повний цикл програмування та тестування.</li>
+                <li>{t("landStepB1")}</li>
+                <li>{t("landStepB2")}</li>
+                <li>{t("landStepB3")}</li>
+                <li>{t("landStepB4")}</li>
               </ul>
             </div>
           </div>
@@ -85,47 +100,53 @@ const LandingPage: React.FC = () => {
 
         {/* --- PRICING SECTION --- */}
         <div id="pricing" className={styles.section}>
-          <h2 className={styles.sectionTitle}>Тарифи та послуги</h2>
+          <h2 className={styles.sectionTitle}>{t("landPricingTitle")}</h2>
           <div className={styles.pricingGrid}>
             
-            <div className={styles.priceCard} onClick={() => handleOrder("Тільки код", "від $200", "Верстка на Next.js, Адаптивність, SEO, Хостинг")}>
-              <h4>&quot;Тільки код&quot;</h4>
-              <div className={styles.price}>від $200</div>
-              <p>Для тих, хто має готовий дизайн у Figma.</p>
+            {/* Тільки код */}
+            <div className={styles.priceCard} onClick={() => handleOrder("landPlan1Name", "$200", ["landPlan1Feat1", "landPlan1Feat2", "landPlan1Feat3", "landPlan1Feat4", "landPlan1Feat5"])}>
+              <h4>{t("landPlan1Name")}</h4>
+              <div className={styles.price}>{t("landPriceFrom")} $200</div>
+              <p>{t("landPlan1Desc")}</p>
               <ul>
-                <li>Верстка на Next.js</li>
-                <li>Адаптивність (Mobile/Tablet)</li>
-                <li>Базове SEO</li>
-                <li>Хостинг у подарунок</li>
+                <li>{t("landPlan1Feat1")}</li>
+                <li>{t("landPlan1Feat2")}</li>
+                <li>{t("landPlan1Feat3")}</li>
+                <li>{t("landPlan1Feat4")}</li>
+                <li><strong>{t("landPlan1Feat5")}</strong></li>
               </ul>
-              <span className={styles.orderLabel}>Замовити →</span>
+              <span className={styles.orderLabel}>{t("landOrder")}</span>
             </div>
 
-            <div className={`${styles.priceCard} ${styles.featuredPrice}`} onClick={() => handleOrder("Під ключ", "від $350", "Дизайн, Копірайтинг, Оптимізація, Підтримка")}>
-              <div className={styles.badge}>Популярно</div>
-              <h4>&quot;Під ключ&quot;</h4>
-              <div className={styles.price}>від $350</div>
-              <p>Повний цикл від дизайну до запуску.</p>
+            {/* Під ключ */}
+            <div className={`${styles.priceCard} ${styles.featuredPrice}`} onClick={() => handleOrder("landPlan2Name", "$350", ["landPlan2Feat1", "landPlan2Feat2", "landPlan2Feat3", "landPlan2Feat4", "landPlan2Feat5"])}>
+              <div className={styles.badge}>HOT</div>
+              <h4>{t("landPlan2Name")}</h4>
+              <div className={styles.price}>{t("landPriceFrom")} $350</div>
+              <p>{t("landPlan2Desc")}</p>
               <ul>
-                <li>Розробка дизайну</li>
-                <li>Копірайтинг (структура)</li>
-                <li>Оптимізація зображень</li>
-                <li>Технічна підтримка</li>
+                <li>{t("landPlan2Feat1")}</li>
+                <li>{t("landPlan2Feat2")}</li>
+                <li>{t("landPlan2Feat3")}</li>
+                <li>{t("landPlan2Feat4")}</li>
+                <li><strong>{t("landPlan2Feat5")}</strong></li>
               </ul>
-              <span className={styles.orderLabel}>Замовити →</span>
+              <span className={styles.orderLabel}>{t("landOrder")}</span>
             </div>
 
-            <div className={styles.priceCard} onClick={() => handleOrder("Бізнес", "від $500", "CMS, Анімації, Багатомовність, Аналітика")}>
-              <h4>&quot;Бізнес&quot;</h4>
-              <div className={styles.price}>від $500</div>
-              <p>Для складних рішень з адмін-панеллю.</p>
+            {/* Бізнес */}
+            <div className={styles.priceCard} onClick={() => handleOrder("landPlan3Name", "$500", ["landPlan3Feat1", "landPlan3Feat2", "landPlan3Feat3", "landPlan3Feat4", "landPlan3Feat5"])}>
+              <h4>{t("landPlan3Name")}</h4>
+              <div className={styles.price}>{t("landPriceFrom")} $500</div>
+              <p>{t("landPlan3Desc")}</p>
               <ul>
-                <li>Інтеграція з CMS</li>
-                <li>Складні анімації</li>
-                <li>Багатомовність</li>
-                <li>Аналітика та Pixel</li>
+                <li>{t("landPlan3Feat1")}</li>
+                <li>{t("landPlan3Feat2")}</li>
+                <li>{t("landPlan3Feat3")}</li>
+                <li>{t("landPlan3Feat4")}</li>
+                <li><strong>{t("landPlan3Feat5")}</strong></li>
               </ul>
-              <span className={styles.orderLabel}>Замовити →</span>
+              <span className={styles.orderLabel}>{t("landOrder")}</span>
             </div>
 
           </div>
@@ -133,10 +154,10 @@ const LandingPage: React.FC = () => {
 
         {/* --- FINAL CTA --- */}
         <div className={styles.finalCta}>
-          <h2>Готові до обговорення?</h2>
-          <p>Напишіть мені, і ми підберемо найкраще рішення під ваш бюджет.</p>
+          <h2>{t("landFinalTitle")}</h2>
+          <p>{t("landFinalDesc")}</p>
           <a href="https://t.me/ljresetl" target="_blank" className={styles.ctaTelegram}>
-             Написати в Telegram @ljresetl
+             {t("landTelegramBtn")} @ljresetl
           </a>
         </div>
       </div>

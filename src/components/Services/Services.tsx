@@ -1,16 +1,16 @@
 "use client"
 
 import React, { useEffect, useState } from "react";
-import Link from "next/link"; // Використовуємо Next.js Link
+import Link from "next/link";
 import styles from "./Services.module.scss";
-import Image from "next/image"; // Використовуємо Next.js Image для оптимізації
+import Image from "next/image";
+import { useLanguage } from "@/useLanguage"; // Переконайся, що шлях вірний
 
 const Services: React.FC = () => {
+  const { t } = useLanguage(); // Хук для перекладу
   const [theme, setTheme] = useState<"light" | "dark">("dark");
 
-  // Відстежуємо зміну теми на body
   useEffect(() => {
-    // Функція для перевірки теми
     const checkTheme = () => {
       if (document.body.classList.contains("light")) {
         setTheme("light");
@@ -19,10 +19,7 @@ const Services: React.FC = () => {
       }
     };
 
-    // Перевіряємо тему при першому рендері
     checkTheme();
-
-    // Стежимо за змінами класів на body
     const observer = new MutationObserver(checkTheme);
     observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
 
@@ -48,44 +45,42 @@ const Services: React.FC = () => {
                 ? "/services-banner-light-tablet.avif"
                 : "/services-banner-tablet.avif"}
             />
-<Image
-  src={theme === "light"
-    ? "/services-banner-light-desktop.avif"
-    : "/services-banner-desktop1.avif"}
-  alt="Frontend development banner"
-  className={styles.bannerImage}
-  width={1200} // Додай реальну ширину картинки
-  height={400}  // Додай реальну висоту картинки
-  priority     // Для банерів краще priority замість loading="eager"
-/>
+            <Image
+              src={theme === "light"
+                ? "/services-banner-light-desktop.avif"
+                : "/services-banner-desktop1.avif"}
+              alt="Frontend development banner"
+              className={styles.bannerImage}
+              width={1200}
+              height={400}
+              priority
+            />
           </picture>
         </div>
 
-        <h1 className={styles.title}>Services</h1>
-        <p className={styles.subtitle}>
-          I build fast, modern and scalable websites with clean architecture and pixel‑perfect UI.
-        </p>
+        <h1 className={styles.title}>{t("servicesTitle")}</h1>
+        <p className={styles.subtitle}>{t("servicesSubtitle")}</p>
 
         {/* Сітка з картками послуг */}
         <div className={styles.cards}>
           <Link href="/services/landing-page" className={styles.card}>
-            <h2>Landing Page Development</h2>
-            <p>High‑conversion landing pages with responsive design and SEO‑ready structure.</p>
+            <h2>{t("serviceLandingTitle")}</h2>
+            <p>{t("serviceLandingDesc")}</p>
           </Link>
 
           <Link href="/services/business-website" className={styles.card}>
-            <h2>Business Website</h2>
-            <p>Multi‑page websites for companies, services, and personal brands.</p>
+            <h2>{t("serviceBusinessTitle")}</h2>
+            <p>{t("serviceBusinessDesc")}</p>
           </Link>
 
           <Link href="/services/ui-ux-implementation" className={styles.card}>
-            <h2>UI/UX Implementation</h2>
-            <p>Pixel‑perfect frontend based on Figma or custom design systems.</p>
+            <h2>{t("serviceUiTitle")}</h2>
+            <p>{t("serviceUiDesc")}</p>
           </Link>
 
           <Link href="/services/performance-optimization" className={styles.card}>
-            <h2>Performance Optimization</h2>
-            <p>Speed improvements, Core Web Vitals, accessibility and SEO enhancements.</p>
+            <h2>{t("servicePerfTitle")}</h2>
+            <p>{t("servicePerfDesc")}</p>
           </Link>
         </div>
       </div>
