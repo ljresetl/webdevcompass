@@ -6,6 +6,17 @@ export interface TranslationKeys {
 
 export const translations: Record<Lang, TranslationKeys> = {
   ua: {
+    // Service page
+    "servicesTitle": "Послуги",
+  "servicesSubtitle": "Створюю швидкі, сучасні та масштабовані сайти з чистою архітектурою та ідеальним інтерфейсом.",
+  "serviceLandingTitle": "Розробка Landing Page",
+  "serviceLandingDesc": "Висококонверсійні цільові сторінки з адаптивним дизайном та SEO-структурою.",
+  "serviceBusinessTitle": "Бізнес-сайт",
+  "serviceBusinessDesc": "Багатосторінкові сайти для компаній, сервісів та персональних брендів.",
+  "serviceUiTitle": "UI/UX Реалізація",
+  "serviceUiDesc": "Pixel-perfect фронтенд розробка на основі Figma або кастомних дизайн-систем.",
+  "servicePerfTitle": "Оптимізація продуктивності",
+  "servicePerfDesc": "Покращення швидкості, Core Web Vitals, доступності та SEO-показників.",
     // Landing Page
 "landTitle": "Лендинги, що працюють на ваш результат",
   "landSubtitle": "Професійна розробка на Next.js: від ідеї та дизайну до технічного запуску.",
@@ -180,6 +191,17 @@ export const translations: Record<Lang, TranslationKeys> = {
   },
 
   en: {
+    // Service page
+    "servicesTitle": "Services",
+  "servicesSubtitle": "I create fast, modern, and scalable websites with clean architecture and perfect interfaces.",
+  "serviceLandingTitle": "Landing Page Development",
+  "serviceLandingDesc": "High-converting landing pages with responsive design and SEO-optimized structure.",
+  "serviceBusinessTitle": "Business Website",
+  "serviceBusinessDesc": "Multi-page websites for companies, services, and personal brands.",
+  "serviceUiTitle": "UI/UX Implementation",
+  "serviceUiDesc": "Pixel-perfect frontend development based on Figma or custom design systems.",
+  "servicePerfTitle": "Performance Optimization",
+  "servicePerfDesc": "Improving speed, Core Web Vitals, accessibility, and SEO metrics.",
     // Landing Page
   "landTitle": "Landings that work for your result",
   "landSubtitle": "Professional development on Next.js: from idea and design to technical launch.",
@@ -354,6 +376,17 @@ export const translations: Record<Lang, TranslationKeys> = {
   },
 
   cz: {
+    // Service page
+    "servicesTitle": "Služby",
+  "servicesSubtitle": "Vytvářím rychlé, moderní a škálovatelné weby s čistou architekturou a dokonalým rozhraním.",
+  "serviceLandingTitle": "Vývoj Landing Page",
+  "serviceLandingDesc": "Vysoce konverzní cílové stránky s responzivním designem a SEO strukturou.",
+  "serviceBusinessTitle": "Firemní web",
+  "serviceBusinessDesc": "Vícevrstvé weby pro společnosti, služby a osobní značky.",
+  "serviceUiTitle": "Implementace UI/UX",
+  "serviceUiDesc": "Pixel-perfect frontend vývoj na základě Figmy nebo vlastních designových systémů.",
+  "servicePerfTitle": "Optimalizace výkonu",
+  "servicePerfDesc": "Zlepšení rychlosti, Core Web Vitals, přístupnosti a SEO ukazatelů.",
     // Landing Page
   "landTitle": "Landing page, které pracují pro váš výsledek",
   "landSubtitle": "Profesionální vývoj na Next.js: od nápadu a designu po technické spuštění.",
