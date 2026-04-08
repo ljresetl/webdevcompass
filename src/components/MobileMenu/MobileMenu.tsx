@@ -59,13 +59,13 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         </li>
 
         <li>
-          <Link 
-            href="/services"
-            onClick={onClose}
-            aria-label="Посилання на розділ Сервіси"
-          >
-            {t("navServices") || "Services"}
-          </Link>
+<Link 
+  href="/services"
+  onClick={onClose} // Закриває меню після кліку
+  aria-label="Посилання на розділ Сервіси"
+>
+  {t("navServices") || "Services"}
+</Link>
         </li>
 
         <li>

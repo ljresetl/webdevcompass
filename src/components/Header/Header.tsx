@@ -76,9 +76,11 @@ const Header: React.FC = () => {
               <li className={styles.ul_navigation_li}>
                 <Link href="/#portfolio">{t("navPortfolio")}</Link>
               </li>
-              <li className={styles.ul_navigation_li}>
-                <Link href="/services">{t("navServices") || "Services"}</Link>
-              </li>
+<li className={styles.ul_navigation_li}>
+  <Link href="/services">
+    {t("navServices") || "Services"}
+  </Link>
+</li>
               <li className={styles.ul_navigation_li}>
                 <Link href="/#connect">{t("navConnect")}</Link>
               </li>

@@ -49,7 +49,7 @@ const Connect: React.FC = () => {
                 aria-label="LinkedIn"
               >
                 <svg width="32" height="32" className={styles.about_me_svg_link_connect}>
-                  <use href="/images/icons.svg#icon-linkendin"></use>
+                  <use href="/icons.svg#icon-linkendin"></use>
                 </svg>
               </a>
 
@@ -60,7 +60,7 @@ const Connect: React.FC = () => {
                 aria-label="GitHub"
               >
                 <svg width="32" height="32" className={styles.about_me_svg_link_connect}>
-                  <use href="/images/icons.svg#icon-github"></use>
+                  <use href="/icons.svg#icon-github"></use>
                 </svg>
               </a>
 
@@ -71,7 +71,7 @@ const Connect: React.FC = () => {
                 aria-label="Telegram"
               >
                 <svg width="24" height="24" className={styles.about_me_svg_link_connect}>
-                  <use href="/images/icons.svg#icon-telegram"></use>
+                  <use href="/icons.svg#icon-telegram"></use>
                 </svg>
               </a>
 
@@ -82,7 +82,7 @@ const Connect: React.FC = () => {
                 aria-label="Instagram"
               >
                 <svg width="32" height="32" className={styles.about_me_svg_link_connect}>
-                  <use href="/images/icons.svg#icon-instagram"></use>
+                  <use href="/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </div>

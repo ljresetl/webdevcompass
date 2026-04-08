@@ -36,7 +36,7 @@ const AboutMe: React.FC = () => {
                 className={styles.about_me_a}
               >
                 <svg width="24" height="24" className={styles.about_me_svg_link}>
-                  <use href="/images/icons.svg#icon-linkendin"></use>
+                  <use href="/icons.svg#icon-linkendin"></use>
                 </svg>
               </a>
 
@@ -47,7 +47,7 @@ const AboutMe: React.FC = () => {
                 className={styles.about_me_a}
               >
                 <svg width="24" height="24" className={styles.about_me_svg_link}>
-                  <use href="/images/icons.svg#icon-telegram"></use>
+                  <use href="/icons.svg#icon-telegram"></use>
                 </svg>
               </a>
 
@@ -58,7 +58,7 @@ const AboutMe: React.FC = () => {
                 className={styles.about_me_a}
               >
                 <svg width="24" height="24" className={styles.about_me_svg_link}>
-                  <use href="/images/icons.svg#icon-github"></use>
+                  <use href="/icons.svg#icon-github"></use>
                 </svg>
               </a>
             </div>

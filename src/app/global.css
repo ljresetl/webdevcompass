@@ -1,4 +1,34 @@
-/* Скидання відступів для заголовків та абзаців */
+/* === 1. ГЛОБАЛЬНІ ЗМІННІ (ТЕМИ) === */
+:root {
+  /* Світла тема (за замовчуванням) */
+  --bg-color: #ffffff;
+  --card-bg-color: #f5f5f5;
+  --text-color: #1b1a1a;
+  --accent-color: #2d8d35;
+  --li-bg-color: #ffffffbe;
+  --color-star: #a18927;
+  --color-tail: rgba(255, 255, 200, 0.7);
+  --border: rgba(0, 0, 0, 0.1);
+}
+
+/* Темна тема (активується класом .dark) */
+:root.dark,
+body.dark {
+  --bg-color: #000000;
+  --card-bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --accent-color: #1cce6f;
+  --li-bg-color: #2b2828be;
+  --color-star: #fff8dc;
+  --color-tail: rgba(173, 216, 230, 0.7);
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+/* === 2. БАЗОВЕ СКИНУТТЯ === */
+* {
+  box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -9,24 +39,6 @@ p {
   margin: 0;
 }
 
-/* Плавна прокрутка */
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 20px;
-}
-/* Це застосується до всіх секцій з id */
-section[id] {
-  /* Збільшуємо запас для анімації. 
-     Якщо заголовок заїжджає під хедер, ставимо більше число */
-  scroll-margin-top: 90px;
-}
-
-/* Останній абзац */
-p:last-child {
-  margin-bottom: 0;
-}
-
-/* Скидання списків */
 ul,
 ol {
   margin: 0;
@@ -34,92 +46,67 @@ ol {
   list-style: none;
 }
 
-/* Скидання стилів для посилань та кнопок */
 a {
   text-decoration: none;
-  color: currentColor;
-  font-style: normal;
+  color: inherit;
 }
 
 button {
   font-family: inherit;
-  color: currentColor;
+  color: inherit;
   cursor: pointer;
+  border: none;
+  background: none;
   padding: 0;
 }
 
 img {
   display: block;
-  width: 100%;
   max-width: 100%;
   height: auto;
+  width: auto;
+  object-fit: cover;
 }
 
-/* Сховані елементи для доступності */
-.visually_hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(100%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+/* === 3. НАЛАШТУВАННЯ NEXT.JS (SCROLL) === */
+html {
+  /* Прибрали scroll-behavior, щоб не було помилки в консолі */
+  scroll-padding-top: 20px;
 }
 
+section[id] {
+  scroll-margin-top: 90px;
+}
+
+/* === 4. СТИЛІ BODY === */
 body {
   margin: 0;
   padding: 0;
   font-family: "Manrope", sans-serif;
-  color: #c7c7c7;
-  letter-spacing: 0.02em;
-  background-color: #0a0a0a;
-  transition:
-    background-color 0.3s,
-    color 0.3s;
-
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 1;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   letter-spacing: -0.01em;
-  color: #c7c7c7;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   overflow-x: hidden;
+
+  /* Виправив розмір шрифту, бо 28px для body — це дуже багато */
+  font-size: 18px;
+  line-height: 1.5;
 }
 
-/* === ГЛОБАЛЬНІ ЗМІННІ ДЛЯ ТЕМИ === */
-
-:root {
-  /* Світла тема за замовчуванням */
-  --bg-color: #ffffff; /* фон сторінки */
-  --card-bg-color: #ded5d5; /* трохи темніший фон для компонентів */
-  --text-color: #1b1a1a; /* основний текст */
-  --accent-color: #00ff95; /* акцент */
-  --li-bg-color: #ffffffbe; /* фон елементів списку */
-  --color-star: #a18927; /* колір зірок */
-  --color-tail: rgba(255, 255, 200, 0.7);
-  transition: all 0.3s ease;
-}
-
-/* === ТЕМНА ТЕМА === */
-body.dark {
-  --bg-color: #000000; /* фон сторінки */
-  --card-bg-color: #1a1a1a; /* трохи світліший фон для компонентів */
-  --text-color: #ffffff; /* текст */
-  --accent-color: #1cce6f; /* акцент */
-  --li-bg-color: #2b2828be;
-  --color-star: #fff8dc;
-  --color-tail: rgba(173, 216, 230, 0.7);
-}
-
-/* === СВІТЛА ТЕМА === */
-body.light {
-  --bg-color: #ffffff;
-  --card-bg-color: #f5f5f5; /* трохи темніший фон для компонентів */
-  --text-color: #1b1a1a;
-  --accent-color: #2d8d35;
-  --li-bg-color: #ffffffbe;
+/* === 5. ДОПОМІЖНІ КЛАСИ === */
+.visually_hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .blur_effect {
@@ -146,6 +133,9 @@ body.light {
 }
 
 .hover-card:hover {
-  transform: translateY(-10px) scale(1.05);
+  transform: translateY(-10px) scale(1.02);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
