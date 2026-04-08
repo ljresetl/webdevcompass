@@ -90,7 +90,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           aria-label="Посилання на LinkedIn"
         >
           <svg width="32" height="32" className={styles.about_me_svg_link_connect}>
-            <use href="/images/icons.svg#icon-linkendin"></use>
+            <use href="/icons.svg#icon-linkendin"></use>
           </svg>
         </a>
 
@@ -102,7 +102,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           aria-label="Посилання на GitHub"
         >
           <svg width="32" height="32" className={styles.about_me_svg_link_connect}>
-            <use href="/images/icons.svg#icon-github"></use>
+            <use href="/icons.svg#icon-github"></use>
           </svg>
         </a>
 
@@ -114,7 +114,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           aria-label="Посилання на Instagram"
         >
           <svg width="32" height="32" className={styles.about_me_svg_link_connect}>
-            <use href="/images/icons.svg#icon-instagram"></use>
+            <use href="/icons.svg#icon-instagram"></use>
           </svg>
         </a>
       </div>

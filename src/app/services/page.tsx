@@ -1,9 +1,11 @@
+import { Metadata } from "next";
 import Services from "@/components/Services/Services";
 
-export default function ServicesPage() {
-  return (
-    <main>
-      <Services />
-    </main>
-  );
+export const metadata: Metadata = {
+  title: "Послуги Frontend Розробки | Vitalii Baranov",
+  description: "Професійне створення лендингів, бізнес-сайтів та оптимізація продуктивності.",
+};
+
+export default function Page() {
+  return <Services />;
 }

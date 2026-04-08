@@ -1,10 +1,18 @@
 import type { Metadata, Viewport } from "next";
+import { Manrope } from "next/font/google";
 import { LanguageProvider } from "@/LanguageContext";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import "./global.css"; 
+import "./global.css";
 
-// 1. Налаштування метаданих (замість <head>)
+// Налаштовуємо шрифт Manrope правильно через Google Fonts
+const manrope = Manrope({
+  subsets: ["latin", "cyrillic"],
+  weight: ["200", "400", "600", "800"],
+  display: "swap",
+  variable: "--font-manrope",
+});
+
 export const metadata: Metadata = {
   title: "Vitalii Baranov | Junior Frontend Developer | React & TypeScript",
   description: "Vitalii Baranov — Frontend розробник, що спеціалізується на створенні сучасних веб-додатків на React та TypeScript.",
@@ -14,9 +22,9 @@ export const metadata: Metadata = {
     canonical: "https://www.webdevcompass.com/",
     languages: {
       "x-default": "https://www.webdevcompass.com/",
-      "uk": "https://www.webdevcompass.com/ua",
-      "en": "https://www.webdevcompass.com/en",
-      "cs": "https://www.webdevcompass.com/cz",
+      uk: "https://www.webdevcompass.com/ua",
+      en: "https://www.webdevcompass.com/en",
+      cs: "https://www.webdevcompass.com/cz",
     },
   },
   icons: {
@@ -36,7 +44,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Налаштування теми та в'юпорту
 export const viewport: Viewport = {
   themeColor: "#0a0a0a",
   width: "device-width",
@@ -49,22 +56,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="uk">
-      <head>
-        {/* Попереднє завантаження критичних ресурсів */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          rel="preload"
-          as="image"
-          href="/343.webp"
-          fetchPriority="high"
-        />
-      </head>
+    <html lang="uk" className={manrope.className}>
+      {/* Видалили <head> з ручним <link rel="preload">. 
+          Тепер картинки вантажаться тільки там, де вони потрібні.
+      */}
       <body>
         <LanguageProvider>
           <Header />

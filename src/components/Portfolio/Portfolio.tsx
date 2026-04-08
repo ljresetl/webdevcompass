@@ -55,6 +55,7 @@ const Portfolio: React.FC = () => {
                     width={300}
                     height={300}
                     className={styles.project_image}
+                    priority={index < 3}
                   />
                 </div>
 

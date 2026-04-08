@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link"; // Використовуємо Next.js Link
 import styles from "./Services.module.scss";
+import Image from "next/image"; // Використовуємо Next.js Image для оптимізації
 
 const Services: React.FC = () => {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
@@ -47,15 +48,16 @@ const Services: React.FC = () => {
                 ? "/services-banner-light-tablet.avif"
                 : "/services-banner-tablet.avif"}
             />
-            <img
-              src={theme === "light"
-                ? "/services-banner-light-desktop.avif"
-                : "/services-banner-desktop1.avif"}
-              alt="Frontend development banner"
-              className={styles.bannerImage}
-              loading="eager"
-              decoding="async"
-            />
+<Image
+  src={theme === "light"
+    ? "/services-banner-light-desktop.avif"
+    : "/services-banner-desktop1.avif"}
+  alt="Frontend development banner"
+  className={styles.bannerImage}
+  width={1200} // Додай реальну ширину картинки
+  height={400}  // Додай реальну висоту картинки
+  priority     // Для банерів краще priority замість loading="eager"
+/>
           </picture>
         </div>
 

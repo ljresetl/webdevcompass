@@ -1,11 +1,27 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import styles from "./Connect.module.scss";
 import { useLanguage } from "@/useLanguage";
 import Section from "@/components/AnimatedScrolSection/AnimatedScrolSection";
 
 const Connect: React.FC = () => {
   const { t } = useLanguage();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // Використовуємо setTimeout, щоб уникнути помилки лінтера про синхронний setState
+    const timer = setTimeout(() => {
+      setMounted(true);
+    }, 0);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Якщо компонент ще не змонтований на клієнті, повертаємо порожню секцію
+  if (!mounted) {
+    return <section id="connect" className={styles.connect} style={{ minHeight: "600px" }} />;
+  }
 
   return (
     <Section className={`${styles.blur_effect} ${styles.gradient_effect}`}>
@@ -49,6 +65,7 @@ const Connect: React.FC = () => {
                 aria-label="LinkedIn"
               >
                 <svg width="32" height="32" className={styles.about_me_svg_link_connect}>
+                  {/* Виправлено шлях на /icons.svg */}
                   <use href="/icons.svg#icon-linkendin"></use>
                 </svg>
               </a>

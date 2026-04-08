@@ -38,9 +38,8 @@ const Foto: React.FC = () => {
     alt={`front-end developer - photo ${index + 1}`}
     width={343}
     height={343}
-    priority={index === 0} // Пріоритет тільки для першого фото
+    priority
     className={styles.my_foto}
-    unoptimized={process.env.NODE_ENV === 'development'} // Спробуйте це, якщо Turbopack не бачить локальні файли
   />
 </div>
 
