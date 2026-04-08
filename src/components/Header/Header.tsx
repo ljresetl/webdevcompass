@@ -131,7 +131,7 @@ const Header: React.FC = () => {
           aria-label="Відкрити меню"
         >
           <svg className={styles.burger_menu_icon} width="44" height="44">
-            <use href="/images/icons.svg#icon-Frame-3"></use>
+            <use href="/icons.svg#icon-Frame-3"></use>
           </svg>
         </button>
 
