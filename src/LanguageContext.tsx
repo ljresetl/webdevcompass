@@ -1,11 +1,10 @@
 "use client";
 
-import { createContext, useState } from "react";
-import type { ReactNode } from "react";
+import { createContext, useState, ReactNode } from "react";
 import { translations } from "./i18n/translations";
 
 export type Lang = "ua" | "en" | "cz";
-export type TranslationKeys = keyof typeof translations["ua"];
+export type TranslationKeys = keyof typeof translations["en"];
 
 interface LanguageContextType {
   lang: Lang;
@@ -13,30 +12,25 @@ interface LanguageContextType {
   t: (key: TranslationKeys) => string;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-interface LanguageProviderProps {
-  children: ReactNode;
-}
+export const LanguageProvider = ({ children }: { children: ReactNode }) => {
+  // 1. Встановлюємо "en" як дефолт для сервера і клієнта
+  const [lang, setLangState] = useState<Lang>("en");
 
-export const LanguageProvider = ({ children }: LanguageProviderProps) => {
-  // 1) Lazy initialization — читаємо localStorage тільки на клієнті
-  const [lang, setLangState] = useState<Lang>(() => {
-    if (typeof window !== "undefined") {
-      return (localStorage.getItem("siteLang") as Lang) || "ua";
-    }
-    return "ua";
-  });
+  // Ми НЕ використовуємо useEffect для авто-читання localStorage при старті,
+  // щоб сайт ЗАВЖДИ завантажувався англійською без блимання.
 
-  // 2) Зміна мови
   const setLang = (newLang: Lang) => {
+    // Зберігаємо в пам'ять тільки коли користувач КЛІКАЄ сам
     localStorage.setItem("siteLang", newLang);
     setLangState(newLang);
   };
 
-  // 3) Функція перекладу
   const t = (key: TranslationKeys) => {
-    return translations[lang][key] ?? key;
+    // translations["en"] буде використовуватися відразу
+    const translation = translations[lang] as Record<string, string>;
+    return translation[key] ?? key;
   };
 
   return (

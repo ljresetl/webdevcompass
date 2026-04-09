@@ -5,7 +5,7 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import "./global.css";
 
-// Налаштовуємо шрифт Manrope правильно через Google Fonts
+// Налаштовуємо шрифт Manrope
 const manrope = Manrope({
   subsets: ["latin", "cyrillic"],
   weight: ["200", "400", "600", "800"],
@@ -15,15 +15,15 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: "Vitalii Baranov | Junior Frontend Developer | React & TypeScript",
-  description: "Vitalii Baranov — Frontend розробник, що спеціалізується на створенні сучасних веб-додатків на React та TypeScript.",
+  description: "Vitalii Baranov — Frontend Developer specializing in building modern web applications with React and TypeScript.",
   authors: [{ name: "Vitalii Baranov" }],
   robots: "index, follow",
   alternates: {
     canonical: "https://www.webdevcompass.com/",
     languages: {
       "x-default": "https://www.webdevcompass.com/",
-      uk: "https://www.webdevcompass.com/ua",
       en: "https://www.webdevcompass.com/en",
+      uk: "https://www.webdevcompass.com/ua",
       cs: "https://www.webdevcompass.com/cz",
     },
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Vitalii Baranov | Junior Frontend Developer Portfolio",
-    description: "Розробка сучасних інтерфейсів на React та TypeScript. Досвід у створенні адаптивних та високопродуктивних веб-додатків.",
+    description: "Developing modern interfaces with React and TypeScript. Experience in creating responsive and high-performance web applications.",
     url: "https://www.webdevcompass.com/",
     type: "website",
     images: [
@@ -41,6 +41,12 @@ export const metadata: Metadata = {
         url: "https://www.webdevcompass.com/preview.png",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vitalii Baranov | Junior Frontend Developer Portfolio",
+    description: "Developing modern interfaces with React and TypeScript.",
+    images: ["https://www.webdevcompass.com/preview.png"],
   },
 };
 
@@ -56,10 +62,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="uk" className={manrope.className}>
-      {/* Видалили <head> з ручним <link rel="preload">. 
-          Тепер картинки вантажаться тільки там, де вони потрібні.
-      */}
+    // Змінено lang="uk" на lang="en"
+    <html lang="en" className={manrope.className}>
       <body>
         <LanguageProvider>
           <Header />
