@@ -1,6 +1,7 @@
 .section {
   width: 100%;
   background-color: var(--bg-color); // фон тепер динамічний
+  font-family: var(--font-manrope), sans-serif;
   will-change: transform, opacity;
   margin: 0 auto;
   max-width: 1200px;

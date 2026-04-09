@@ -8,6 +8,7 @@
   z-index: 1000;
   background-color: var(--bg-color);
   color: var(--text-color);
+  font-family: var(--font-manrope), sans-serif;
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
@@ -36,6 +37,7 @@
    ЛОГОТИП
    ============================ */
 .logo {
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 400;
   font-size: 28px;
   line-height: 1;
@@ -69,6 +71,7 @@
     align-items: center;
 
     .ul_navigation_li {
+      font-family: var(--font-manrope), sans-serif;
       font-weight: 500;
       font-size: 16px;
       line-height: 1.6;
@@ -113,6 +116,7 @@
   }
 
   button {
+    font-family: var(--font-manrope), sans-serif;
     padding: 8px 14px;
     background: none;
     border: none;
@@ -162,6 +166,7 @@
   }
 
   .language_switcher_button {
+    font-family: var(--font-manrope), sans-serif;
     background-color: #256835;
     border: none;
     margin-bottom: 4px;

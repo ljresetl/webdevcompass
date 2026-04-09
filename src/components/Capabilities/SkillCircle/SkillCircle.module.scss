@@ -2,6 +2,7 @@
   width: clamp(70px, 5vw, 100px);
   margin: 1rem;
   text-align: center;
+  font-family: var(--font-manrope), sans-serif;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -18,6 +19,7 @@
 
   .label {
     margin-top: 0.5rem;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 0.9rem;
     color: var(--text-color); // використовує змінну теми
     transition: color 0.3s ease;

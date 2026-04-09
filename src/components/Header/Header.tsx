@@ -5,13 +5,15 @@ import Link from "next/link";
 import styles from "./Header.module.scss";
 import MobileMenu from "@/components/MobileMenu/MobileMenu";
 import { useLanguage } from "@/useLanguage";
-
 import { FaMoon, FaSun } from "react-icons/fa";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [isLangOpen, setIsLangOpen] = useState(false);
+  
+  // 1. ПОЧАТКОВИЙ СТАН: Завжди "light". 
+  // Це забезпечує білий рендер на сервері та при першому показі.
+  const [theme, setTheme] = useState<"light" | "dark">("light");
 
   const { lang, setLang, t } = useLanguage();
 
@@ -26,26 +28,30 @@ const Header: React.FC = () => {
     };
   }, [isMenuOpen]);
 
-  // Ініціалізація теми (React 19-safe)
+  // 2. СИНХРОНІЗАЦІЯ ТЕМИ (Без помилки Cascading Renders)
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
 
-    const savedTheme = localStorage.getItem("theme");
-    const initialTheme =
-      savedTheme === "light" || savedTheme === "dark" ? savedTheme : "dark";
-
-    Promise.resolve().then(() => {
-      setTheme(initialTheme);
-      document.body.classList.add(initialTheme);
-    });
+    // Якщо збережена тема "dark", ми перемикаємося на неї.
+    // Використовуємо requestAnimationFrame, щоб React не сварився на синхронний setState.
+    if (savedTheme === "dark") {
+      requestAnimationFrame(() => {
+        setTheme("dark");
+        document.body.classList.remove("light");
+        document.body.classList.add("dark");
+      });
+    } else {
+      // Якщо в сховищі light або порожньо — залишаємо білу тему
+      document.body.classList.remove("dark");
+      document.body.classList.add("light");
+    }
   }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
-
     setTheme(newTheme);
 
-    document.body.classList.remove(theme);
+    document.body.classList.remove("light", "dark");
     document.body.classList.add(newTheme);
 
     localStorage.setItem("theme", newTheme);
@@ -54,7 +60,6 @@ const Header: React.FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-
         {/* Логотип */}
         <div className={styles.logoContainer}>
           <Link href="/" className={styles.logo} aria-label="На головну">
@@ -64,7 +69,6 @@ const Header: React.FC = () => {
 
         {/* Навігація + мова + тема */}
         <div className={styles.language_switcher}>
-
           <nav className={styles.navigation} aria-label="Головне меню">
             <ul className={styles.header_ul}>
               <li className={styles.ul_navigation_li}>
@@ -76,11 +80,9 @@ const Header: React.FC = () => {
               <li className={styles.ul_navigation_li}>
                 <Link href="/#portfolio">{t("navPortfolio")}</Link>
               </li>
-<li className={styles.ul_navigation_li}>
-  <Link href="/services">
-    {t("navServices") || "Services"}
-  </Link>
-</li>
+              <li className={styles.ul_navigation_li}>
+                <Link href="/services">{t("navServices") || "Services"}</Link>
+              </li>
               <li className={styles.ul_navigation_li}>
                 <Link href="/#connect">{t("navConnect")}</Link>
               </li>
@@ -98,15 +100,9 @@ const Header: React.FC = () => {
 
             {isLangOpen && (
               <div className={styles.languageMenu}>
-                <button onClick={() => { setLang("ua"); setIsLangOpen(false); }}>
-                  Українська
-                </button>
-                <button onClick={() => { setLang("en"); setIsLangOpen(false); }}>
-                  English
-                </button>
-                <button onClick={() => { setLang("cz"); setIsLangOpen(false); }}>
-                  Čeština
-                </button>
+                <button onClick={() => { setLang("ua"); setIsLangOpen(false); }}>Українська</button>
+                <button onClick={() => { setLang("en"); setIsLangOpen(false); }}>English</button>
+                <button onClick={() => { setLang("cz"); setIsLangOpen(false); }}>Čeština</button>
               </div>
             )}
           </div>
@@ -119,9 +115,11 @@ const Header: React.FC = () => {
             aria-label="Змінити тему"
             type="button"
           >
-            {theme === "light"
-              ? <FaMoon size={20} color="#161717ff" />
-              : <FaSun size={20} color="#d5eb0bff" />}
+            {theme === "light" ? (
+              <FaMoon size={20} color="#161717ff" />
+            ) : (
+              <FaSun size={20} color="#d5eb0bff" />
+            )}
           </button>
         </div>
 

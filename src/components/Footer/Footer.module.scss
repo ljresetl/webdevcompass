@@ -2,6 +2,7 @@
   width: 100%; /* 🔥 футер тепер на всю ширину */
   padding: 24px 0;
   background-color: var(--bg-color); // 🔹 фоновий колір залежно від теми
+  font-family: var(--font-manrope), sans-serif;
   color: var(--text-color);
   transition:
     background-color 0.3s ease,
@@ -20,7 +21,7 @@
 }
 
 .container_footer_p {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-manrope), sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;

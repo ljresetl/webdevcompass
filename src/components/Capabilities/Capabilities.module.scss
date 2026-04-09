@@ -1,6 +1,6 @@
 .capabilities {
   padding: 24px 0;
-  font-family: "Manrope", sans-serif; 
+  font-family: var(--font-manrope), sans-serif;
   background-color: var(--card-bg-color);
   color: var(--text-color);
   transition:
@@ -23,6 +23,7 @@
   }
 
   .capabilities_h {
+    font-family: var(--font-montserrat), sans-serif;
     font-weight: 400;
     font-size: 32px;
     line-height: 1.1;
@@ -46,13 +47,16 @@
   }
 
   .capabilities_p {
+    font-family: var(--font-manrope), sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.6;
     color: var(--text-color);
-    opacity: 0.8; 
+    opacity: 0.8;
     margin-bottom: 24px;
-    transition: color 0.3s ease, opacity 0.3s ease;
+    transition:
+      color 0.3s ease,
+      opacity 0.3s ease;
 
     @media screen and (min-width: 768px) {
       font-size: 20px;
@@ -74,6 +78,7 @@
   }
 
   .capabilities_li {
+    font-family: var(--font-manrope), sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;

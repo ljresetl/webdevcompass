@@ -5,6 +5,7 @@
   justify-content: center;
   height: 20px; /* висота рядка */
   background-color: var(--card-bg-color); /* фон залежить від теми */
+  font-family: var(--font-manrope), sans-serif;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   padding: 0 8px;
   position: relative; /* щоб список автодоповнення позиціонувався всередині */
@@ -35,6 +36,7 @@
   width: 100%;
   height: 100%;
   padding: 0 8px;
+  font-family: var(--font-manrope), sans-serif;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -64,6 +66,7 @@
   li {
     padding: 6px 8px;
     cursor: pointer;
+    font-family: var(--font-manrope), sans-serif;
     font-size: 14px;
     color: var(--text-color);
     background: var(--li-bg-color);
@@ -89,6 +92,7 @@
   white-space: nowrap; /* не переносити рядки */
   padding-left: 100%; /* старт анімації справа */
   animation: tickerMove 25s linear infinite;
+  font-family: var(--font-manrope), sans-serif;
   font-size: 14px;
   line-height: 40px;
   color: var(--text-color); /* тепер залежить від теми */
@@ -96,6 +100,7 @@
 
 /* Назва міста у тікері */
 .cityLabel {
+  font-family: var(--font-montserrat), sans-serif;
   font-weight: 700;
   margin-right: 8px;
   color: var(--text-color);

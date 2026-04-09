@@ -2,7 +2,11 @@
   padding: 24px 0;
   background-color: var(--card-bg-color);
   color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  // Встановлюємо основний шрифт для всього блоку
+  font-family: var(--font-manrope), sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 
   .container {
     display: flex;
@@ -20,9 +24,11 @@
   }
 
   .about_me_h {
+    // Використовуємо Montserrat для заголовка
+    font-family: var(--font-montserrat), sans-serif;
     text-align: left;
     margin-bottom: 4px;
-    font-weight: 400;
+    font-weight: 700; // Для Montserrat краще 700+ для заголовків
     font-size: 32px;
     line-height: 1.1;
     color: var(--text-color);
@@ -46,12 +52,16 @@
 
   .about_me_p,
   .about_me_p_two {
+    // Для тексту залишаємо Manrope
+    font-family: var(--font-manrope), sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 24px;
     color: var(--text-color);
-    transition: color 0.3s ease, opacity 0.3s ease;
+    transition:
+      color 0.3s ease,
+      opacity 0.3s ease;
 
     @media screen and (min-width: 768px) {
       font-size: 20px;
@@ -60,34 +70,36 @@
   }
 
   .about_me_p_two {
-    opacity: 0.8; 
+    opacity: 0.8;
   }
 }
 
 // === ОНОВЛЕНИЙ БЛОК КНОПОК ТА СОЦМЕРЕЖ ===
 .button_a_a {
   display: flex;
-  flex-direction: row; // Завжди в ряд
+  flex-direction: row;
   align-items: center;
-  justify-content: flex-start; // Починаємо зліва
+  justify-content: flex-start;
   width: 100%;
-  gap: 12px; // Відстань між кнопкою та іконками
+  gap: 12px;
   flex-wrap: nowrap;
 
   .about_me_button {
+    // Для кнопок Manrope зазвичай виглядає краще
+    font-family: var(--font-manrope), sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 100px;
-    width: 212px; // Фіксована ширина кнопки
+    width: 212px;
     height: 44px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1;
     text-transform: uppercase;
-    white-space: nowrap; // Текст у кнопці не переноситься
-    color: var(--bg-color); 
-    background-color: var(--accent-color); 
+    white-space: nowrap;
+    color: var(--bg-color);
+    background-color: var(--accent-color);
     transition: opacity 0.3s ease;
 
     &:hover {
@@ -95,7 +107,6 @@
     }
   }
 
-  // Обгортка для соцмереж, щоб вони трималися купи
   .social_links_wrap {
     display: flex;
     gap: 8px;
@@ -103,7 +114,7 @@
 
   .about_me_a {
     border-radius: 100px;
-    width: 44px; // Трохи компактніше для мобілок
+    width: 44px;
     height: 44px;
     display: flex;
     align-items: center;
@@ -116,7 +127,7 @@
     }
 
     .about_me_svg_link {
-      fill: var(--accent-color); 
+      fill: var(--accent-color);
       transition: fill 0.3s ease;
       width: 24px;
       height: 24px;
@@ -132,7 +143,7 @@
 
   .button_a_a {
     gap: 20px;
-    
+
     .about_me_a {
       width: 48px;
       height: 48px;

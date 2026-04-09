@@ -2,6 +2,7 @@
   padding: 20px 0; // Мінімальні падінги
   background-color: var(--bg-color);
   color: var(--text-color);
+  font-family: var(--font-manrope), sans-serif;
   min-height: 100vh;
   transition: all 0.3s ease;
   display: flex;
@@ -25,6 +26,7 @@
 }
 
 .sectionTitle {
+  font-family: var(--font-montserrat), sans-serif;
   text-align: center;
   margin-bottom: 30px;
   font-size: clamp(1.5rem, 5vw, 2rem);
@@ -41,6 +43,7 @@
 }
 
 .title {
+  font-family: var(--font-montserrat), sans-serif;
   font-size: clamp(32px, 7vw, 56px);
   font-weight: 900;
   margin-bottom: 16px;
@@ -48,6 +51,7 @@
 }
 
 .subtitle {
+  font-family: var(--font-manrope), sans-serif;
   margin-bottom: 30px;
   opacity: 0.8;
   font-size: 1.1rem;
@@ -62,6 +66,7 @@
 }
 
 .ctaOutline {
+  font-family: var(--font-manrope), sans-serif;
   padding: 12px 28px;
   border-radius: 12px;
   font-weight: 700;
@@ -98,6 +103,7 @@
   border-radius: 20px;
   border: 1px solid var(--border);
   text-align: center;
+  font-family: var(--font-manrope), sans-serif;
   transition: transform 0.3s ease;
 
   &:hover {
@@ -111,10 +117,12 @@
   }
 
   h3 {
+    font-family: var(--font-montserrat), sans-serif;
     margin-bottom: 10px;
     font-weight: 700;
   }
   p {
+    font-family: var(--font-manrope), sans-serif;
     line-height: 1.5;
     opacity: 0.8;
     margin: 0;
@@ -134,8 +142,10 @@
   padding: 25px;
   border-radius: 20px;
   border: 1px solid var(--border);
+  font-family: var(--font-manrope), sans-serif;
 
   h3 {
+    font-family: var(--font-montserrat), sans-serif;
     color: var(--accent-color);
     margin-bottom: 15px;
     font-weight: 700;
@@ -170,6 +180,7 @@
   border-radius: 24px;
   border: 1px solid var(--border);
   text-align: center;
+  font-family: var(--font-manrope), sans-serif;
   cursor: pointer;
   transition: all 0.3s ease; // Плавна анімація
   position: relative;
@@ -183,17 +194,20 @@
   }
 
   h4 {
+    font-family: var(--font-montserrat), sans-serif;
     font-size: 1.4rem;
     margin-bottom: 8px;
     font-weight: 700;
   }
   .price {
+    font-family: var(--font-manrope), sans-serif;
     font-size: 1.8rem;
     font-weight: 800;
     color: var(--accent-color);
     margin-bottom: 10px;
   }
   p {
+    font-family: var(--font-manrope), sans-serif;
     font-size: 0.9rem;
     opacity: 0.7;
     margin-bottom: 20px;
@@ -219,6 +233,7 @@
   }
 
   .orderLabel {
+    font-family: var(--font-manrope), sans-serif;
     font-weight: 700;
     color: var(--accent-color);
     text-transform: uppercase;
@@ -231,6 +246,7 @@
 }
 
 .badge {
+  font-family: var(--font-manrope), sans-serif;
   position: absolute;
   top: -12px;
   left: 50%;
@@ -253,9 +269,11 @@
   padding: 40px 20px;
   border-radius: 32px;
   border: 1px solid var(--border);
+  font-family: var(--font-manrope), sans-serif;
   margin-top: 20px;
 
   h2 {
+    font-family: var(--font-montserrat), sans-serif;
     margin-bottom: 15px;
     font-weight: 800;
     font-size: 1.8rem;
@@ -268,6 +286,7 @@
 }
 
 .ctaTelegram {
+  font-family: var(--font-manrope), sans-serif;
   display: inline-block;
   background: var(--accent-color);
   color: #fff;

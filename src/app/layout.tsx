@@ -1,16 +1,24 @@
 import type { Metadata, Viewport } from "next";
-import { Manrope } from "next/font/google";
+import { Manrope, Montserrat } from "next/font/google"; // Додано Montserrat
 import { LanguageProvider } from "@/LanguageContext";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import "./global.css";
 
-// Налаштовуємо шрифт Manrope
+// Основний шрифт для тексту
 const manrope = Manrope({
   subsets: ["latin", "cyrillic"],
   weight: ["200", "400", "600", "800"],
   display: "swap",
   variable: "--font-manrope",
+});
+
+// Другий шрифт для заголовків
+const montserrat = Montserrat({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "700", "900"],
+  display: "swap",
+  variable: "--font-montserrat", // CSS-змінна для використання в стилях
 });
 
 export const metadata: Metadata = {
@@ -62,8 +70,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    // Змінено lang="uk" на lang="en"
-    <html lang="en" className={manrope.className}>
+    // Додаємо обидва шрифти (className для основного та variable для другого)
+    <html lang="en" className={`${manrope.className} ${montserrat.variable}`}>
       <body>
         <LanguageProvider>
           <Header />

@@ -7,9 +7,9 @@
   overflow: hidden;
   pointer-events: none;
   z-index: -1;
-  
+
   // Додаємо моноширинний шрифт для ефекту коду
-  font-family: 'Fira Code', 'Manrope', monospace;
+  font-family: "Fira Code", var(--font-manrope), monospace;
   font-size: 14px;
   line-height: 1.8;
   white-space: pre-wrap;
@@ -17,9 +17,9 @@
   padding: 40px;
 
   /* --- ОБРАНИЙ КОЛІР (Slate Blue) --- */
-  color: #64748b; 
+  color: #64748b;
   /* ---------------------------------- */
-  
+
   opacity: 0;
   // Плавна поява + нахил
   transform: skewY(-2deg);

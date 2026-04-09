@@ -6,6 +6,7 @@
   width: 80%; // або скільки потрібно
   height: 100%;
   background-color: var(--card-bg-color); // фон під тему
+  font-family: var(--font-manrope), sans-serif;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   overflow-y: auto;
@@ -24,13 +25,14 @@
     margin-top: 50px;
     align-items: flex-start;
     padding: 0px 20px;
-    font-family: "Manrope", sans-serif;
+    font-family: var(--font-manrope), sans-serif;
     color: var(--text-color); // текст під тему
     letter-spacing: 0.02em;
     transition: color 0.3s ease;
 
     li {
       a {
+        font-family: var(--font-manrope), sans-serif;
         color: var(--text-color); // текст посилань під тему
         text-decoration: none;
         font-size: 16px;

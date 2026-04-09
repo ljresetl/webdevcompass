@@ -2,7 +2,10 @@
   padding: 24px 0;
   background-color: var(--card-bg-color);
   color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: var(--font-manrope), sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 
   .container {
     display: flex;
@@ -20,6 +23,7 @@
   }
 
   .experience_h {
+    font-family: var(--font-montserrat), sans-serif;
     font-weight: 400;
     font-size: 32px; // Мобільний
     line-height: 1.1;
@@ -48,15 +52,16 @@
   .experience_p_two,
   .experience_p_two_two,
   .experience_p_four_four {
+    font-family: var(--font-manrope), sans-serif;
     font-weight: 400;
-    font-size: 18px;    // Базовий мобільний
+    font-size: 18px; // Базовий мобільний
     line-height: 1.6;
     color: var(--text-color);
     margin-bottom: 24px;
     transition: color 0.3s ease;
 
     @media screen and (min-width: 768px) {
-      font-size: 20px;  // Планшет та десктоп
+      font-size: 20px; // Планшет та десктоп
       margin-bottom: 28px;
     }
   }
@@ -64,6 +69,7 @@
   // --- Заголовки посад/ролей ---
   .experience_p,
   .experience_p_three {
+    font-family: var(--font-manrope), sans-serif;
     font-weight: 600;
     font-size: 20px;
     line-height: 1.3;
@@ -78,6 +84,7 @@
 
   // Дата або акцентний рядок
   .experience_p_five {
+    font-family: var(--font-manrope), sans-serif;
     font-weight: 600;
     font-size: 16px;
     line-height: 1.6;

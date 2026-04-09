@@ -1,6 +1,7 @@
 .foto {
   padding: 6px 0px 20px 0px;
   background-color: var(--card-bg-color);
+  font-family: var(--font-manrope), sans-serif;
   transition: background-color 0.3s ease;
 
   .container {
@@ -53,6 +54,7 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    font-family: var(--font-manrope), sans-serif;
     // padding: 0 10px;
 
     @media (min-width: 768px) {
@@ -66,6 +68,7 @@
     }
 
     .about_me_text_h {
+      font-family: var(--font-montserrat), sans-serif;
       font-weight: 800;
       font-size: 24px;
       line-height: 1.2;
@@ -83,6 +86,7 @@
     }
 
     .about_me_text_p {
+      font-family: var(--font-manrope), sans-serif;
       font-weight: 400;
       font-size: 16px;
       line-height: 1.5;
