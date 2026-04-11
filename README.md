@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Мій Професійний Frontend-Hub — Next.js Portfolio
 
-## Getting Started
+Це моє персональне портфоліо, розроблене з фокусом на технічну досконалість, високу швидкість завантаження та сучасні стандарти розробки.
 
-First, run the development server:
+## 🚀 Технічні переваги та якість
+Сайт є прикладом високоякісної верстки та програмування:
+- **Продуктивність:** Показник **95+ балів** (Lighthouse) за швидкість, доступність та SEO.
+- **Валідність:** Повністю валідний код, що відповідає сучасним стандартам W3C.
+- **Оптимізація:** Швидке завантаження завдяки Server-Side Rendering (SSR) та оптимізації зображень.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠 Технологічний стек
+У проекті використано сучасний набір інструментів професійного розробника:
+- **Framework:** [Next.js](https://nextjs.org/) — для максимальної швидкості та SEO-оптимізації.
+- **Мова:** [TypeScript](https://www.typescriptlang.org/) — гарантує стабільність та чистоту коду.
+- **Стилізація:** [SCSS Modules](https://sass-lang.com/) — для гнучкої та модульної архітектури стилів.
+- **Адаптивність:** Mobile-First дизайн, що ідеально працює на будь-яких екранах.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📂 Що всередині?
+- **Приклади робіт:** Динамічний розділ з моїми проектами та кейсами.
+- **Інтерактив:** Плавна анімація та логіка "Show More" для комфортного перегляду.
+- **Чистий код:** Проект розроблений з можливістю легкої підтримки та масштабування.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏁 Як переглянути локально
+1. `npm install` — встановлення всіх необхідних пакетів.
+2. `npm run dev` — запуск локального сервера для розробки.
+3. `npm run build` — створення оптимізованої версії для продакшену.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Розроблено мною з використанням найкращих практик сучасного вебу.*
