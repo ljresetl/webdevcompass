@@ -7,7 +7,7 @@ export interface TranslationKeys {
 export const translations: Record<Lang, TranslationKeys> = {
   ua: {
     "projectNgHubTitle": "NG Omega Hub",
-"projectNgHubDescription": "Майданчик для професійного розвитку та тестування новітніх фронтенд-можливостей на Next.js.",
+"projectNgHubDescription": "Тестовий лендінг для перевірки сучасних методів фронтенд-розробки та можливостей Next.js.",
     // Service page
     "servicesTitle": "Послуги",
   "servicesSubtitle": "Створюю швидкі, сучасні та масштабовані сайти з чистою архітектурою та ідеальним інтерфейсом.",
@@ -194,7 +194,7 @@ export const translations: Record<Lang, TranslationKeys> = {
 
   en: {
     "projectNgHubTitle": "NG Omega Hub",
-"projectNgHubDescription": "A platform for professional growth and testing the latest frontend capabilities using Next.js.",
+"projectNgHubDescription": "Landing page test for evaluating modern frontend development techniques and Next.js capabilities.",
     // Service page
     "servicesTitle": "Services",
   "servicesSubtitle": "I create fast, modern, and scalable websites with clean architecture and perfect interfaces.",
@@ -381,7 +381,7 @@ export const translations: Record<Lang, TranslationKeys> = {
 
   cz: {
     "projectNgHubTitle": "NG Omega Hub",
-"projectNgHubDescription": "Prostor pro profesionální rozvoj a testování nejnovějších frontendových možností na Next.js.",
+"projectNgHubDescription": "Testovací landing page pro ověření moderních metod frontend vývoje a možností Next.js.",
     // Service page
     "servicesTitle": "Služby",
   "servicesSubtitle": "Vytvářím rychlé, moderní a škálovatelné weby s čistou architekturou a dokonalým rozhraním.",
