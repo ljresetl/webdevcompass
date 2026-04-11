@@ -3,7 +3,7 @@ export const projects = [
   {
     title: "projectNgHubTitle",
     description: "projectNgHubDescription",
-    image: "/ng-hub-preview.webp", // Не забудь додати скріншот у public або змінити назву
+    image: "/1024 (3).avif", // Не забудь додати скріншот у public або змінити назву
     technologies: ["Next.js", "TypeScript", "SCSS"],
     github: "https://github.com/ljresetl/ng-hub",
     website: "https://ngomega.netlify.app/",
