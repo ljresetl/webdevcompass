@@ -11,25 +11,30 @@ import Section from "@/components/AnimatedScrolSection/AnimatedScrolSection";
 const Portfolio: React.FC = () => {
   const { t } = useLanguage();
 
-  // Безпечна ініціалізація для SSR
+  // Стан для визначення типу пристрою та кількості видимих проектів
   const [isDesktop, setIsDesktop] = useState(false);
   const [visibleCount, setVisibleCount] = useState(4);
 
-  // Визначення ширини екрана після монтування
   useEffect(() => {
-    const checkScreen = () => {
+    // 1. Визначаємо початковий стан при першому рендері
+    const width = window.innerWidth;
+    const desktopStatus = width >= 1280;
+    
+    setIsDesktop(desktopStatus);
+    setVisibleCount(desktopStatus ? 3 : 4);
+
+    // 2. Функція тільки для оновлення прапорця isDesktop (без скидання лічильника)
+    const handleResize = () => {
       const desktop = window.innerWidth >= 1280;
       setIsDesktop(desktop);
-      setVisibleCount(desktop ? 3 : 4);
     };
 
-    checkScreen();
-    window.addEventListener("resize", checkScreen);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); // Масив порожній, щоб спрацювало лише при монтуванні
 
-    return () => window.removeEventListener("resize", checkScreen);
-  }, []);
-
-  const loadMore = () => {
+  const loadMore = (e: React.MouseEvent) => {
+    e.preventDefault(); // На всякий випадок зупиняємо дефолтну поведінку
     setVisibleCount((prev) => prev + (isDesktop ? 3 : 2));
   };
 
@@ -93,7 +98,11 @@ const Portfolio: React.FC = () => {
           </div>
 
           {visibleCount < projects.length && (
-            <button className={styles.button_loadmore} onClick={loadMore}>
+            <button 
+              type="button" 
+              className={styles.button_loadmore} 
+              onClick={loadMore}
+            >
               {t("navPortfolioLoadMore")}
             </button>
           )}
