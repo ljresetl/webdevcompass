@@ -1,6 +1,14 @@
 
-
 export const projects = [
+  {
+    title: "projectNgHubTitle",
+    description: "projectNgHubDescription",
+    image: "/ng-hub-preview.webp", // Не забудь додати скріншот у public або змінити назву
+    technologies: ["Next.js", "TypeScript", "SCSS"],
+    github: "https://github.com/ljresetl/ng-hub",
+    website: "https://ngomega.netlify.app/",
+    featured: true,   // ← ПОКАЗАТИ НА ЛЕНДИНГУ
+  },
   {
     title: "projectAmondrexTitle",
     description: "projectAmondrexDescription",
@@ -8,7 +16,7 @@ export const projects = [
     technologies: ["React", "TypeScript", "JS"],
     github: "https://github.com/ljresetl/fond-amondrex",
     website: "https://www.amondrexcf.com/",
-    featured: true,   // ← ПОКАЗАТИ НА ЛЕНДИНГУ
+    featured: true,
   },
   {
     title: "projectKeyboardTitle",
@@ -17,7 +25,7 @@ export const projects = [
     technologies: ["HTML", "CSS", "JS"],
     github: "https://github.com/ljresetl/game-for-you",
     website: "https://game-for-you-tawny.vercel.app/",
-    featured: false,   // ← ПОКАЗАТИ НА ЛЕНДИНГУ
+    featured: false,
   },
   {
     title: "projectMoviesTitle",
@@ -26,7 +34,7 @@ export const projects = [
     technologies: ["React", "TypeScript", "JS"],
     github: "https://github.com/ljresetl/03-react-movies",
     website: "https://03-react-movies-one-liard.vercel.app/",
-    featured: false,   // ← ПОКАЗАТИ НА ЛЕНДИНГУ
+    featured: false,
   },
   {
     title: "projectMusicAppTitle",
@@ -89,7 +97,7 @@ export const projects = [
     technologies: ["HTML", "CSS", "JS"],
     github: "https://github.com/ljresetl/team-work-yachtjet",
     website: "https://ljresetl.github.io/team-work-yachtjet/",
-    featured: true,   // ← ПОКАЗАТИ НА ЛЕНДИНГУ
+    featured: true,
   },
   {
     title: "projectWeatherTitle",
@@ -98,7 +106,7 @@ export const projects = [
     technologies: ["HTML", "CSS", "JS"],
     github: "https://github.com/ljresetl/weather-html-css-js",
     website: "https://ljresetl.github.io/weather-html-css-js/",
-    featured: true,   // ← ПОКАЗАТИ НА ЛЕНДИНГУ
+    featured: false, // ← ЗМІНЕНО НА FALSE
   },
   {
     title: "projectSWESTitle",
