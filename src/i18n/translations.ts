@@ -6,6 +6,7 @@ export interface TranslationKeys {
 
 export const translations: Record<Lang, TranslationKeys> = {
   ua: {
+    "bannerSubtitle": "Професійний веб-розробник: ваш компас до сучасних фронтенд-рішень",
     "projectNgHubTitle": "NG Consulting",
 "projectNgHubDescription": "Сайт для створення та просування ваших інтернет проектів",
     // Service page
@@ -193,6 +194,7 @@ export const translations: Record<Lang, TranslationKeys> = {
   },
 
   en: {
+    "bannerSubtitle": "Professional web developer: your compass to modern front-end solutions",
     "projectNgHubTitle": "NG Consulting",
 "projectNgHubDescription": "A website for creating and promoting your online projects",
     // Service page
@@ -380,6 +382,7 @@ export const translations: Record<Lang, TranslationKeys> = {
   },
 
   cz: {
+    "bannerSubtitle": "Profesionální webový vývojář: váš kompas k moderním front-end řešením",
     "projectNgHubTitle": "NG Consulting",
 "projectNgHubDescription": "Web pro tvorbu a propagaci vašich internetových projektů",
     // Service page

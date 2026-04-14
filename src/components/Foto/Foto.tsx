@@ -24,8 +24,10 @@ const Foto: React.FC = () => {
           <div className={styles.container}>
             <div className={styles.bannerBottomContent}>
               <h1 className={styles.bannerTitle}>WebDevCompass</h1>
+              
+              {/* Тепер текст використовує переклад */}
               <p className={styles.bannerSubtitle}>
-                PROFESSIONAL WEB DEVELOPER: YOUR COMPASS TO MODERN FRONT-END SOLUTIONS
+                {t("bannerSubtitle")}
               </p>
               
               <div className={styles.buttonsRow}>
