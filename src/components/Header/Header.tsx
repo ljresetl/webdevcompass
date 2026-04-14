@@ -63,7 +63,7 @@ const Header: React.FC = () => {
         {/* Логотип */}
         <div className={styles.logoContainer}>
           <Link href="/" className={styles.logo} aria-label="На головну">
-            FrontEnd
+            WebDevCompass
           </Link>
         </div>
 
