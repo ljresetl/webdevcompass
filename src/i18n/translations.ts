@@ -124,24 +124,36 @@ export const translations: Record<Lang, TranslationKeys> = {
     skillReact: "React",
     skillTS: "TypeScript",
     navAboutMe: "Про мене",
-    navAboutMeP: "Я — фронтенд-розробник із Ліберця, Чехія. Маю технічну освіту у сфері комп’ютерних систем та спеціалізуюся на створенні сучасних вебінтерфейсів.",
-    navAboutMeTwoP: "У своїй роботі я поєдную прагматичний підхід і креативність.",
+navAboutMeP: "Я — Frontend розробник із Ліберця з профільною технічною освітою та експертизою у створенні сучасних цифрових інтерфейсів.",
+
+navAboutMeTwoP: "Мій підхід базується на поєднанні технічної точності, прагматизму та креативних рішень.",
     navButtonResume: "Завантажити резюме",
     navAboutTextH: "Привіт! Я Віталій — Frontend розробник",
-    navAboutTextP: "Наразі я активно вивчаю JavaScript і проходжу курси на Fullstack розробника.",
-    navAboutTextPtwo: "Маю міцні знання HTML та CSS, вмію створювати адаптивні інтерфейси.",
-    navAboutTextPthree: "Працюю над проектами, щоб покращувати навички і освоювати нові технології.",
-    navAboutTextPfour: "Вірю, що постійне навчання і практика — це ключ до успіху.",
-    navAboutTextPfive: "Я відкритий до нових викликів і готовий долучатися до цікавих проектів.",
-    navAboutTextPsix: "Якщо шукаєш мотивованого розробника — зв'яжись зі мною!",
+navAboutTextP: "Розробляю сучасні веб-додатки, використовуючи актуальний стек JavaScript.",
+
+navAboutTextPtwo: "Створюю надійні адаптивні інтерфейси з глибоким знанням HTML та CSS.",
+
+navAboutTextPthree: "Реалізую практичні проекти, впроваджуючи нові технології та кращі практики.",
+
+navAboutTextPfour: "Постійне вдосконалення навичок — це мій головний пріоритет у розробці.",
+
+navAboutTextPfive: "Готовий до складних викликів та ефективної роботи над вашими проектами.",
+
+navAboutTextPsix: "Шукаєте енергійного розробника для команди? Зв'яжіться зі мною!",
     navExperienceH: "Мій досвід",
-    navExperienceP: "Самостійне навчання та практичні проєкти",
-    navExperiencePtwo: "2024 — теперішній час",
-    navExperiencePthree: "Активно вивчаю фронтенд-розробку, працюю над навчальними та особистими проектами.",
-    navExperiencePfour: "Курси та онлайн-навчання",
-    navExperiencePsix: "2024 — теперішній час",
-    navExperiencePseven: "Самоосвіта",
-    navExperiencePeight: "Проходжу навчальні програми та онлайн-курси, які допомагають розвивати практичні навички.",
+navExperienceP: "Практична розробка та персональні проєкти",
+
+navExperiencePtwo: "2025 — теперішній час",
+
+navExperiencePthree: "Створюю архітектуру фронтенд-додатків, реалізуючи складні технічні завдання у власних проєктах.",
+
+navExperiencePfour: "Сертифікована підготовка та спеціалізація",
+
+navExperiencePsix: "2025 — теперішній час",
+
+navExperiencePseven: "Професійна самоосвіта",
+
+navExperiencePeight: "Освоюю передові методології розробки через інтенсивні програми та спеціалізовані курси.",
     navPortfolioH: "Приклади робіт",
     navPortfolioHtwo: "Фінансовий консалтинг",
     navPortfolioPone: "Опис: односторінковий адаптивний сайт для британської компанії з фінансового консалтингу.",
@@ -312,24 +324,36 @@ export const translations: Record<Lang, TranslationKeys> = {
     skillReact: "React",
     skillTS: "TypeScript",
     navAboutMe: "About me",
-    navAboutMeP: "I am a front-end developer from Liberec, Czech Republic, with a technical education in computer systems and specializing in building modern web interfaces.",
-    navAboutMeTwoP: "In my work I combine a pragmatic approach with creativity.",
+navAboutMeP: "I am a Frontend Developer based in Liberec with a technical background and expertise in building modern digital interfaces.",
+
+navAboutMeTwoP: "My approach is built on a combination of technical precision, pragmatism, and creative solutions.",  
     navButtonResume: "Download resume",
     navAboutTextH: "Hi! I’m Vitalii — Frontend Developer",
-    navAboutTextP: "At the moment I am actively learning JavaScript and taking full-stack courses.",
-    navAboutTextPtwo: "I have solid knowledge of HTML and CSS and I am able to build adaptive interfaces.",
-    navAboutTextPthree: "I work on projects to improve my skills and learn new technologies.",
-    navAboutTextPfour: "I believe that continuous learning and practice are key to success.",
-    navAboutTextPfive: "I am open to new challenges and ready to get involved in interesting projects.",
-    navAboutTextPsix: "If you are looking for a motivated developer — get in touch with me!",
+navAboutTextP: "I develop modern web applications using the current JavaScript stack.",
+
+navAboutTextPtwo: "I create reliable responsive interfaces with deep knowledge of HTML and CSS.",
+
+navAboutTextPthree: "I implement practical projects, applying new technologies and best practices.",
+
+navAboutTextPfour: "Constant skill improvement is my main priority in web development.",
+
+navAboutTextPfive: "I am ready for complex challenges and effective work on your projects.",
+
+navAboutTextPsix: "Looking for an energetic developer for your team? Get in touch!",
     navExperienceH: "My experience",
-    navExperienceP: "Self-learning and practical projects",
-    navExperiencePtwo: "2024 — present",
-    navExperiencePthree: "Actively studying front-end development and working on educational and personal projects.",
-    navExperiencePfour: "Courses and online learning",
-    navExperiencePsix: "2024 — present",
-    navExperiencePseven: "Self-education",
-    navExperiencePeight: "Undertaking training programs and online courses that help develop practical skills.",
+navExperienceP: "Practical Development & Personal Projects",
+
+navExperiencePtwo: "2025 — Present",
+
+navExperiencePthree: "Designing frontend application architecture and solving complex technical tasks in personal projects.",
+
+navExperiencePfour: "Certified Training & Specialization",
+
+navExperiencePsix: "2025 — Present",
+
+navExperiencePseven: "Professional Self-Education",
+
+navExperiencePeight: "Mastering advanced development methodologies through intensive programs and specialized courses.",
     navPortfolioH: "Work examples",
     navPortfolioHtwo: "Financial consulting",
     navPortfolioPone: "Description: a one-page responsive website for a British financial consulting company.",
@@ -500,24 +524,36 @@ export const translations: Record<Lang, TranslationKeys> = {
     skillReact: "React",
     skillTS: "TypeScript",
     navAboutMe: "O mně",
-    navAboutMeP: "Jsem front-end vývojář z Liberce, Česká republika, s technickým vzděláním v oblasti počítačových systémů a specializuji se na tvorbu moderních webových rozhraní.",
-    navAboutMeTwoP: "Ve své práci kombinuji pragmatický přístup s kreativitou.",
+navAboutMeP: "Jsem Frontend vývojář z Liberce s odborným technickým vzděláním a expertízou v tvorbě moderních digitálních rozhraní.",
+
+navAboutMeTwoP: "Můj přístup je založen na kombinaci technické preciznosti, pragmatismu a kreativních řešení.",
     navButtonResume: "Stáhnout životopis",
     navAboutTextH: "Ahoj! Jsem Vitalii — Frontend vývojář",
-    navAboutTextP: "V současné době aktivně studuji JavaScript a absolvují kurzy na full-stack vývojáře.",
-    navAboutTextPtwo: "Mám pevné znalosti HTML a CSS a umím vytvářet adaptivní rozhraní.",
-    navAboutTextPthree: "Pracuji na projektech, abych zlepšil své dovednosti a osvojil si nové technologie.",
-    navAboutTextPfour: "Věřím, že neustálé učení a praxe jsou klíčem k úspěchu.",
-    navAboutTextPfive: "Jsem otevřený novým výzvám a připravený se zapojit do zajímavých projektů.",
-    navAboutTextPsix: "Hledáš motivovaného vývojáře? Spoj se se mnou!",
+navAboutTextP: "Vyvíjím moderní webové aplikace s využitím aktuálního stacku JavaScript.",
+
+navAboutTextPtwo: "Vytvářím spolehlivá responzivní rozhraní s hlubokou znalostí HTML a CSS.",
+
+navAboutTextPthree: "Realizuji praktické projekty, zavádím nové technologie a nejlepší postupy.",
+
+navAboutTextPfour: "Neustálé zdokonalování dovedností je mou hlavní prioritou ve vývoji.",
+
+navAboutTextPfive: "Jsem připraven na náročné výzvy a efektivní práci na vašich projektech.",
+
+navAboutTextPsix: "Hledáte energického vývojáře do týmu? Neváhejte mě kontaktovat!",
     navExperienceH: "Moje zkušenosti",
-    navExperienceP: "Samostudium a praktické projekty",
-    navExperiencePtwo: "2024 — dosud",
-    navExperiencePthree: "Aktivně studuji front-end vývoj a pracuji na vzdělávacích a osobních projektech.",
-    navExperiencePfour: "Kurzy a online vzdělávání",
-    navExperiencePsix: "2024 — dosud",
-    navExperiencePseven: "Samostudium",
-    navExperiencePeight: "Absolvuji vzdělávací programy a online kurzy, které pomáhají rozvíjet praktické dovednosti.",
+navExperienceP: "Praktický vývoj a osobní projekty",
+
+navExperiencePtwo: "2025 — současnost",
+
+navExperiencePthree: "Navrhuji architekturu frontendových aplikací a realizuji náročné technické úkoly ve vlastních projektech.",
+
+navExperiencePfour: "Certifikovaná příprava a specializace",
+
+navExperiencePsix: "2025 — současnost",
+
+navExperiencePseven: "Profesionální sebevzdělávání",
+
+navExperiencePeight: "Osvojuji si špičkové metodiky vývoje prostřednictvím intenzivních programů a odborných kurzů.",
     navPortfolioH: "Ukázky prací",
     navPortfolioHtwo: "Finanční poradenství",
     navPortfolioPone: "Popis: jednopage responzivní stránka pro britskou finanční poradenskou společnost.",
