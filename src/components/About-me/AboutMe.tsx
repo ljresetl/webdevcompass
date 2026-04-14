@@ -39,7 +39,7 @@ const AboutMe: React.FC = () => {
 
             <div className={styles.button_a_a}>
               <a
-                href="/files/Vitalii_Baranov_Frontend_Developer.pdf"
+                href="/Vitalii_Baranov_Frontend_Developer.pdf"
                 download
                 className={styles.about_me_button}
                 aria-label="Завантажити резюме"

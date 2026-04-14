@@ -1,6 +1,6 @@
 .portfolio {
   padding: 24px 0;
-  background-color: var(--card-bg-color);
+  // background-color: var(--card-bg-color);
   font-family: var(--font-manrope), sans-serif;
 
   .container {
@@ -11,6 +11,7 @@
     padding: 0 16px;
 
     @media screen and (min-width: 1280px) {
+      max-width: 1200px; // Обмеження ширини для десктопа
       padding: 0 30px;
     }
   }
