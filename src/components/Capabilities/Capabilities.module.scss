@@ -1,91 +1,132 @@
+// Змінні кольорів на основі твого бренду
+$bg-dark: #0a0a0a; // Глибокий темний
+$accent-blue: #00d4ff; // Блакитний як у лого
+$text-white: #ffffff;
+$text-gray: #b0b0b0;
+
+// Припускаю, що шрифти підключені в globals.scss, тут ми їх застосовуємо
+$font-main: "Inter", sans-serif; // Заміни на назву свого шрифту
+$font-heading: "Montserrat", sans-serif; // Заміни на назву свого шрифту
+
+.wrapper {
+  background: $bg-dark;
+  position: relative;
+  overflow: hidden;
+  
+  // Твій фірмовий градієнт-блюр на фоні
+  &::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba($accent-blue, 0.1) 0%, transparent 70%);
+    filter: blur(80px);
+    z-index: 0;
+  }
+}
+
 .capabilities {
-  padding: 50px 0;
-  width: 100%;
-  color: #ffffff;
+  padding: 60px 0;
+  color: $text-white;
+  font-family: $font-main;
+  position: relative;
+  z-index: 1;
 
   .container {
-    max-width: 1240px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
   }
 
   .capabilities_h {
+    font-family: $font-heading;
     font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 30px;
+    font-weight: 800;
+    margin-bottom: 40px;
     text-align: center;
-    background: linear-gradient(180deg, #fff 0%, #999 100%);
+    letter-spacing: -0.5px;
+    
+    // Ефект градієнта на тексті як у професійних портфоліо
+    background: linear-gradient(180deg, $text-white 0%, $text-gray 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .content_wrapper {
     display: flex;
-    flex-direction: column; // Mobile First
+    flex-direction: column;
     gap: 40px;
   }
 
   .capabilities_p {
     font-size: 1.1rem;
-    line-height: 1.6;
-    color: #a1a1a1;
+    line-height: 1.7;
+    color: $text-gray;
     text-align: center;
   }
 
-  .skills_side {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
+  .skill_group {
+    margin-bottom: 35px;
 
-  .group_title {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #00d4ff;
-    margin-bottom: 16px;
-    text-align: center;
+    .group_title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: $accent-blue;
+      margin-bottom: 20px;
+      text-align: center;
+    }
   }
 
   .skills_grid {
     display: grid;
-    // Автоматичне розширення колонок: мінімум 120px
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
     gap: 12px;
   }
 
   .skill_card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 16px;
-    border-radius: 12px;
+    padding: 14px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(4px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(10px);
 
     &:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: #00d4ff;
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      background: rgba($accent-blue, 0.1);
+      border-color: rgba($accent-blue, 0.4);
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      
+      .skill_name {
+        color: $accent-blue;
+      }
     }
 
     .skill_name {
-      font-size: 0.95rem;
-      font-weight: 500;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: $text-white;
+      transition: color 0.3s ease;
     }
   }
 }
 
-// --- ТАБЛЕТКИ (від 768px) ---
+// --- Адаптивність (Mobile First) ---
+
 @media (min-width: 768px) {
   .capabilities {
-    padding: 80px 0;
+    padding: 100px 0;
 
     .capabilities_h {
-      font-size: 3rem;
+      font-size: 3.5rem;
+      text-align: left;
     }
 
     .group_title {
@@ -94,43 +135,30 @@
   }
 }
 
-// --- ДЕСКТОП (від 1024px) ---
 @media (min-width: 1024px) {
   .content_wrapper {
-    flex-direction: row; // Горизонтальне розташування
+    flex-direction: row;
     align-items: flex-start;
   }
 
   .text_side {
     flex: 1;
-    position: sticky; // Текст "залипає" при скролі навичок
-    top: 100px;
+    position: sticky;
+    top: 120px;
   }
 
   .skills_side {
-    flex: 1.5;
+    flex: 1.2;
   }
 
   .capabilities_p {
     text-align: left;
-    padding-right: 40px;
+    padding-right: 60px;
+    font-size: 1.2rem;
   }
 
   .skills_grid {
-    grid-template-columns: repeat(3, 1fr); // Фіксовано 3 колонки на великих екранах
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
   }
-}
-
-// Додаткові ефекти
-.blur_effect {
-  backdrop-filter: blur(20px);
-}
-
-.gradient_effect {
-  background: radial-gradient(
-    circle at 50% 0%,
-    rgba(0, 212, 255, 0.05) 0%,
-    transparent 70%
-  );
 }
