@@ -5,7 +5,7 @@ import Image from "next/image";
 import styles from "./Portfolio.module.scss";
 import { projects } from "./projectsData";
 import { useLanguage } from "@/useLanguage";
-import Section from "@/components/AnimatedScrolSection/AnimatedScrolSection";
+// import Section from "@/components/AnimatedScrolSection/AnimatedScrolSection";
 
 const Portfolio: React.FC = () => {
   const { t } = useLanguage();
