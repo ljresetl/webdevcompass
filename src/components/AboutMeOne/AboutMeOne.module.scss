@@ -1,0 +1,88 @@
+.aboutme {
+  padding: 24px 0;
+  //   background-color: var(--card-bg-color);
+  color: var(--text-color);
+  font-family: var(--font-manrope), sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  .container {
+    // background-color: var(--card-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px; // Обмеження ширини для десктопа
+    margin: 0 auto;
+    padding: 0 16px;
+    gap: 12px;
+
+    @media screen and (min-width: 1280px) {
+      padding: 0 30px;
+      flex-direction: row;
+      gap: 40px;
+    }
+  }
+}
+
+.about_me_h {
+  font-family: var(--font-montserrat), sans-serif;
+  text-align: left;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.1;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+
+  @media screen and (min-width: 768px) {
+    font-size: 42px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    flex: 1;
+    font-size: 48px;
+    max-width: 550px; // Твоє обмеження з попереднього запиту
+  }
+}
+
+.about_me_right {
+  @media screen and (min-width: 1280px) {
+    flex: 1;
+  }
+
+  .about_me_p {
+    font-family: var(--font-manrope), sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    transition:
+      color 0.3s ease,
+      opacity 0.3s ease;
+
+    @media screen and (min-width: 768px) {
+      font-size: 20px;
+      margin-bottom: 24px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      opacity: 0.8;
+    }
+  }
+}
+
+// Планшетна та десктопна логіка відступів
+@media (min-width: 768px) {
+  .aboutme {
+    padding: 60px 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .aboutme {
+    padding: 80px 0;
+  }
+}
