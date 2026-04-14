@@ -1,6 +1,6 @@
 <div align="center">
 
-[![Прев'ю мого портфоліо](./public/Screenshot_20260411-035435.png)](https://webdevcompass.com)
+[![Прев'ю мого портфоліо](./public/Screenshot_20260414-155036.png)](https://webdevcompass.com)
 
 # 🚀 My Professional Frontend-Hub
 ### Next.js Portfolio | High-Performance Web Development
