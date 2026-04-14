@@ -1,133 +1,136 @@
 .capabilities {
-  padding: 24px 0;
-  font-family: var(--font-manrope), sans-serif;
-  // background-color: var(--card-bg-color);
-  color: var(--text-color);
-  transition:
-    color 0.3s ease,
-    background-color 0.3s ease;
+  padding: 50px 0;
+  width: 100%;
+  color: #ffffff;
 
   .container {
-    display: flex;
-    flex-direction: column;
+    max-width: 1240px;
     margin: 0 auto;
-    padding: 0 16px;
-    gap: 12px;
-    text-align: left;
-
-    @media screen and (min-width: 1280px) {
-      flex-direction: row;
-      padding: 0 30px;
-      gap: 40px;
-    }
+    padding: 0 20px;
   }
 
   .capabilities_h {
-    font-family: var(--font-montserrat), sans-serif;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 1.1;
-    color: var(--text-color);
-    transition: color 0.3s ease;
-
-    @media screen and (min-width: 768px) {
-      font-size: 42px;
-    }
-
-    @media screen and (min-width: 1280px) {
-      flex: 1;
-      font-size: 48px;
-    }
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    background: linear-gradient(180deg, #fff 0%, #999 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
-}
 
-.capabilities_right {
-  @media screen and (min-width: 1280px) {
-    flex: 1;
+  .content_wrapper {
+    display: flex;
+    flex-direction: column; // Mobile First
+    gap: 40px;
   }
 
   .capabilities_p {
-    font-family: var(--font-manrope), sans-serif;
-    font-weight: 400;
-    font-size: 18px;
+    font-size: 1.1rem;
     line-height: 1.6;
-    color: var(--text-color);
-    opacity: 0.8;
-    margin-bottom: 24px;
-    transition:
-      color 0.3s ease,
-      opacity 0.3s ease;
-
-    @media screen and (min-width: 768px) {
-      font-size: 20px;
-      margin-bottom: 28px;
-    }
-  }
-}
-
-.capabilities_ul {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center; // 🔹 Центр на мобільному
-  gap: 12px;
-
-  @media screen and (min-width: 768px) {
-    justify-content: flex-start; // 🔹 Вліво на планшеті/десктопі
-    gap: 16px;
+    color: #a1a1a1;
+    text-align: center;
   }
 
-  .capabilities_li {
-    font-family: var(--font-manrope), sans-serif;
+  .skills_side {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1;
-    text-transform: uppercase;
-    color: var(--text-color);
-    border: 1px solid rgba(128, 128, 128, 0.3);
-    border-radius: 100px;
-    padding: 12px 20px;
-    transition:
-      color 0.3s ease,
-      border-color 0.3s ease,
-      background-color 0.3s ease;
+    flex-direction: column;
+    gap: 32px;
+  }
 
-    @media screen and (min-width: 768px) {
-      padding: 14px 24px;
-      font-size: 15px;
-    }
+  .group_title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00d4ff;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .skills_grid {
+    display: grid;
+    // Автоматичне розширення колонок: мінімум 120px
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+  }
+
+  .skill_card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
 
     &:hover {
-      border-color: var(--accent-color);
-      color: var(--accent-color);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: #00d4ff;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .skill_name {
+      font-size: 0.95rem;
+      font-weight: 500;
     }
   }
 }
 
-.capabilities_skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center; // 🔹 Центр на мобільному
-  margin: 0 auto;
-
-  @media screen and (min-width: 768px) {
-    justify-content: flex-start; // 🔹 Вліво на десктопі
-  }
-}
-
-// === ГЛОБАЛЬНІ ВІДСТУПИ СЕКЦІЇ ===
+// --- ТАБЛЕТКИ (від 768px) ---
 @media (min-width: 768px) {
   .capabilities {
-    padding: 60px 0;
+    padding: 80px 0;
+
+    .capabilities_h {
+      font-size: 3rem;
+    }
+
+    .group_title {
+      text-align: left;
+    }
   }
 }
 
-@media (min-width: 1280px) {
-  .capabilities {
-    padding: 80px 0;
+// --- ДЕСКТОП (від 1024px) ---
+@media (min-width: 1024px) {
+  .content_wrapper {
+    flex-direction: row; // Горизонтальне розташування
+    align-items: flex-start;
   }
+
+  .text_side {
+    flex: 1;
+    position: sticky; // Текст "залипає" при скролі навичок
+    top: 100px;
+  }
+
+  .skills_side {
+    flex: 1.5;
+  }
+
+  .capabilities_p {
+    text-align: left;
+    padding-right: 40px;
+  }
+
+  .skills_grid {
+    grid-template-columns: repeat(3, 1fr); // Фіксовано 3 колонки на великих екранах
+    gap: 16px;
+  }
+}
+
+// Додаткові ефекти
+.blur_effect {
+  backdrop-filter: blur(20px);
+}
+
+.gradient_effect {
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(0, 212, 255, 0.05) 0%,
+    transparent 70%
+  );
 }
