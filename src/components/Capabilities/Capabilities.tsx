@@ -9,13 +9,15 @@ const Capabilities: React.FC = () => {
   const { t } = useLanguage();
 
   const skills = [
-    { label: t("skillHTML"), level: 80 },
-    { label: t("skillCSS"), level: 75 },
-    { label: t("skillJS"), level: 40 },
-    { label: t("skillFigma"), level: 70 },
-    { label: t("skillVite"), level: 55 },
-    { label: t("skillReact"), level: 45 },
-    { label: t("skillTS"), level: 40 },
+    { label: t("HTML"), level: 80 },
+    { label: t("CSS"), level: 75 },
+    { label: t("SCSS"), level: 75 },
+    { label: t("JS"), level: 40 },
+    { label: t("Figma"), level: 70 },
+    { label: t("Vite"), level: 55 },
+    { label: t("React"), level: 50 },
+    { label: t("TS"), level: 40 },
+    { label: t("Next.js"), level: 50 },
   ];
 
   return (
