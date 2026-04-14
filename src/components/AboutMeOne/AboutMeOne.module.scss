@@ -27,13 +27,14 @@
 
 .about_me_h {
   font-family: var(--font-montserrat), sans-serif;
-  text-align: left;
-  margin-bottom: 4px;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 32px;
   line-height: 1.1;
+  letter-spacing: -0.02em; // Додає стилю
+  text-align: left; // Центрує на мобільних
   color: var(--text-color);
-  transition: color 0.3s ease;
+  margin-bottom: 32px; // Щоб не липло до тексту
+  transition: color 0.3s ease; // Щоб плавно мінялась тема
 
   @media screen and (min-width: 768px) {
     font-size: 42px;

@@ -19,12 +19,13 @@
   .portfolio_h {
     font-family: var(--font-montserrat), sans-serif;
     font-weight: 400;
-    // Уніфікація з іншими секціями
     font-size: 32px;
     line-height: 1.1;
-    letter-spacing: -0.02em;
-    text-align: center;
+    letter-spacing: -0.02em; // Додає стилю
+    text-align: left; // Центрує на мобільних
     color: var(--text-color);
+    margin-bottom: 32px; // Щоб не липло до тексту
+    transition: color 0.3s ease; // Щоб плавно мінялась тема
 
     @media (min-width: 768px) {
       font-size: 42px;

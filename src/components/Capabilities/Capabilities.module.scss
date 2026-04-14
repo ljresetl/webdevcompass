@@ -3,7 +3,7 @@
   position: relative;
   overflow: hidden;
   transition: background-color 0.3s ease;
-  
+
   &::after {
     content: "";
     position: absolute;
@@ -11,7 +11,11 @@
     left: -5%;
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(41, 152, 19, 0.05) 0%, transparent 70%);
+    background: radial-gradient(
+      circle,
+      rgba(41, 152, 19, 0.05) 0%,
+      transparent 70%
+    );
     filter: blur(60px);
     z-index: 0;
   }
@@ -36,18 +40,19 @@
 
   .capabilities_h {
     font-family: var(--font-montserrat), sans-serif;
-    font-size: 24px;
     font-weight: 400;
-    margin-bottom: 30px;
-    text-align: center;
-    color: var(--accent-color);
-    letter-spacing: -0.01em;
-    line-height: 1.2;
+    font-size: 32px;
+    line-height: 1.1;
+    letter-spacing: -0.02em; // Додає стилю
+    text-align: left; // Центрує на мобільних
+    color: var(--text-color);
+    margin-bottom: 32px; // Щоб не липло до тексту
+    transition: color 0.3s ease; // Щоб плавно мінялась тема
 
     @media screen and (min-width: 768px) {
       font-size: 32px;
     }
-    
+
     @media screen and (min-width: 1280px) {
       font-size: 40px;
       text-align: left;
@@ -79,7 +84,7 @@
     line-height: 1.6;
     color: var(--text-color);
     opacity: 0.8;
-    text-align: center;
+    text-align: left;
 
     @media screen and (min-width: 1280px) {
       text-align: left;
@@ -122,6 +127,7 @@
   }
 
   .skill_card {
+    text-decoration: none; // Прибираємо підкреслення посилання
     background: transparent;
     border: 1px solid rgba(128, 128, 128, 0.2);
     padding: 12px;
@@ -130,12 +136,14 @@
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease;
+    cursor: pointer;
 
     &:hover {
       border-color: var(--accent-color);
+      background: rgba(41, 152, 19, 0.05); // Легкий фон при наведенні
       transform: translateY(-3px);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      
+
       .skill_name {
         color: var(--accent-color);
       }
