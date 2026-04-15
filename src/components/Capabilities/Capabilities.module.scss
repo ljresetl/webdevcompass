@@ -43,19 +43,14 @@
     font-weight: 400;
     font-size: 32px;
     line-height: 1.1;
-    letter-spacing: -0.02em; // Додає стилю
-    text-align: left; // Центрує на мобільних
+    letter-spacing: -0.02em;
+    text-align: left;
     color: var(--text-color);
-    margin-bottom: 32px; // Щоб не липло до тексту
-    transition: color 0.3s ease; // Щоб плавно мінялась тема
-
-    @media screen and (min-width: 768px) {
-      font-size: 32px;
-    }
+    margin-bottom: 32px;
+    transition: color 0.3s ease;
 
     @media screen and (min-width: 1280px) {
       font-size: 40px;
-      text-align: left;
     }
   }
 
@@ -84,11 +79,6 @@
     line-height: 1.6;
     color: var(--text-color);
     opacity: 0.8;
-    text-align: left;
-
-    @media screen and (min-width: 1280px) {
-      text-align: left;
-    }
   }
 
   .skills_side {
@@ -107,11 +97,7 @@
       letter-spacing: 0.1em;
       color: var(--accent-color);
       margin-bottom: 20px;
-      text-align: center;
-
-      @media screen and (min-width: 1280px) {
-        text-align: left;
-      }
+      text-align: left;
     }
   }
 
@@ -127,26 +113,41 @@
   }
 
   .skill_card {
-    text-decoration: none; // Прибираємо підкреслення посилання
-    background: transparent;
+    text-decoration: none;
+    background: var(--bg-color);
     border: 1px solid rgba(128, 128, 128, 0.2);
     padding: 12px;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease;
+    position: relative;
     cursor: pointer;
+    
+    // Плавність для всіх станів
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    // Ефект "піднятої" кнопки через тінь
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
     &:hover {
       border-color: var(--accent-color);
-      background: rgba(41, 152, 19, 0.05); // Легкий фон при наведенні
-      transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      background: rgba(41, 152, 19, 0.03);
+      transform: translateY(-4px); // Піднімаємо сильніше при наведенні
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 
       .skill_name {
         color: var(--accent-color);
       }
+    }
+
+    // РЕАЛЬНЕ НАТИСКАННЯ
+    &:active {
+      transform: translateY(1px); // Втискаємо вниз відносно початкової точки
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 
+                  inset 0 1px 3px rgba(0, 0, 0, 0.08); // Внутрішня тінь додає глибини
+      border-color: var(--accent-color);
+      transition: all 0.05s ease; // Миттєва реакція на клік
     }
 
     .skill_name {
@@ -155,6 +156,7 @@
       color: var(--text-color);
       white-space: nowrap;
       transition: color 0.3s ease;
+      pointer-events: none; // Щоб текст не заважав кліку
     }
   }
 }
