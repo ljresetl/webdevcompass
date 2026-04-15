@@ -140,7 +140,7 @@ navExperienceP: "Практична розробка та персональні
 
 navExperiencePtwo: "2025 — теперішній час",
 
-navExperiencePthree: "Створюю архітектуру фронтенд-додатків, реалізуючи складні технічні завдання у власних проєктах.",
+navExperiencePthree: "Створюю архітектуру вебсторінок, реалізуючи складні технічні завдання у власних проєктах.",
 
 navExperiencePfour: "Сертифікована підготовка та спеціалізація",
 
@@ -335,7 +335,7 @@ navExperienceP: "Practical Development & Personal Projects",
 
 navExperiencePtwo: "2025 — Present",
 
-navExperiencePthree: "Designing frontend application architecture and solving complex technical tasks in personal projects.",
+navExperiencePthree: "Designing website  and solving complex technical tasks in personal projects.",
 
 navExperiencePfour: "Certified Training & Specialization",
 
@@ -530,7 +530,7 @@ navExperienceP: "Praktický vývoj a osobní projekty",
 
 navExperiencePtwo: "2025 — současnost",
 
-navExperiencePthree: "Navrhuji architekturu frontendových aplikací a realizuji náročné technické úkoly ve vlastních projektech.",
+navExperiencePthree: "Navrhuji architekturu webových stránek a realizuji náročné technické úkoly ve vlastních projektech.",
 
 navExperiencePfour: "Certifikovaná příprava a specializace",
 
