@@ -24,6 +24,14 @@ export const metadata: Metadata = {
   description: "Vitalii Baranov — Frontend Developer specializing in building modern websites with Next.js. Offering high-performance web solutions and custom development.",
   authors: [{ name: "Vitalii Baranov" }],
   robots: "index, follow",
+  
+  // Додаємо підтвердження Freelancehunt сюди
+  verification: {
+    other: {
+      freelancehunt: ['df43d9045ceca46'],
+    },
+  },
+
   alternates: {
     canonical: "https://www.webdevcompass.com/",
     languages: {
