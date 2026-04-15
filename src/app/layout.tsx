@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "WebDev Compass | Vitalii Baranov",
     images: [
       {
-        url: "https://www.webdevcompass.com/new.avif",
+        url: "https://www.webdevcompass.com/new.png",
         width: 1200,
         height: 630,
         alt: "Vitalii Baranov - Modern Web Development Services Preview",
