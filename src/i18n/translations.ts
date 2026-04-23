@@ -6,6 +6,8 @@ export interface TranslationKeys {
 
 export const translations: Record<Lang, TranslationKeys> = {
   ua: {
+    "projectFilmTitle": "Онлайн кінотеатр",
+    "projectFilmDescription": "Сайт для перегляду фільмів онлайн українською мовою, створений з використанням Next.js та TypeScript.",
     "bannerSubtitle": "Професійний веб-розробник: ваш компас до сучасних фронтенд-рішень",
     "projectNgHubTitle": "NG Consulting",
 "projectNgHubDescription": "Сайт для створення та просування ваших інтернет проектів",
@@ -201,6 +203,8 @@ navExperiencePeight: "Освоюю передові методології ро�
   },
 
   en: {
+    "projectFilmTitle": "Online Cinema",
+  "projectFilmDescription": "A website for watching movies online in Ukrainian, built with Next.js and TypeScript.",
     "bannerSubtitle": "Professional web developer: your compass to modern front-end solutions",
     "projectNgHubTitle": "NG Consulting",
 "projectNgHubDescription": "A website for creating and promoting your online projects",
@@ -396,6 +400,8 @@ navExperiencePeight: "Mastering advanced development methodologies through inten
   },
 
   cz: {
+    "projectFilmTitle": "Online kino",
+  "projectFilmDescription": "Webová stránka pro sledování filmů online v ukrajinštině, vytvořená pomocí Next.js a TypeScriptu.",
     "bannerSubtitle": "Profesionální webový vývojář: váš kompas k moderním front-end řešením",
     "projectNgHubTitle": "NG Consulting",
 "projectNgHubDescription": "Web pro tvorbu a propagaci vašich internetových projektů",
