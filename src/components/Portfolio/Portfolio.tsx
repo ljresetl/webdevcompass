@@ -5,6 +5,7 @@ import Image from "next/image";
 import styles from "./Portfolio.module.scss";
 import { projects } from "./projectsData";
 import { useLanguage } from "@/useLanguage";
+import Section from "../AnimatedScrolSection/AnimatedScrolSection";
 // import Section from "@/components/AnimatedScrolSection/AnimatedScrolSection";
 
 const Portfolio: React.FC = () => {
@@ -44,11 +45,11 @@ const Portfolio: React.FC = () => {
   if (!isReady) return null;
 
   return (
-    <section 
-      id="portfolio" 
+    <Section 
+      
       className={`${styles.blur_effect} ${styles.gradient_effect}`}
     >
-      <section className={styles.portfolio}>
+      <section id="portfolio"  className={styles.portfolio}>
         <div className={styles.container}>
           <h3 className={styles.portfolio_h}>{t("navPortfolioH")}</h3>
 
@@ -110,7 +111,7 @@ const Portfolio: React.FC = () => {
           )}
         </div>
       </section>
-    </section>
+    </Section>
   );
 };
 

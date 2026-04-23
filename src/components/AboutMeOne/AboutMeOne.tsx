@@ -3,11 +3,13 @@
 import React from "react";
 import styles from "./AboutMeOne.module.scss";
 import { useLanguage } from "@/useLanguage";
+import Section from "../AnimatedScrolSection/AnimatedScrolSection";
 
 const AboutMeOne: React.FC = () => {
   const { t } = useLanguage();
 
   return (
+    <Section className={`${styles.blur_effect} ${styles.gradient_effect}`}>
     <section className={styles.aboutme}>
       <div className={styles.container}>
         {/* Ліва частина - Заголовок (Montserrat) */}
@@ -25,7 +27,8 @@ const AboutMeOne: React.FC = () => {
           <p className={styles.about_me_p}>{t("navAboutTextPsix")}</p>
         </div>
       </div>
-    </section>
+      </section>
+      </Section>
   );
 };
 

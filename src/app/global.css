@@ -8,7 +8,7 @@
   --li-bg-color: #ffffffbe;
   --color-star: #a18927;
   --color-tail: rgba(255, 255, 200, 0.7);
-  --border: rgba(0, 0, 0, 0.1);
+  --border: #000000;
 }
 
 /* Темна тема (активується класом .dark) */
@@ -21,7 +21,7 @@ body.dark {
   --li-bg-color: #2b2828be;
   --color-star: #fff8dc;
   --color-tail: rgba(173, 216, 230, 0.7);
-  --border: rgba(255, 255, 255, 0.1);
+  --border: #ffffff;
 }
 
 /* === 2. БАЗОВЕ СКИНУТТЯ === */
