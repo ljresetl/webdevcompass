@@ -1,5 +1,15 @@
 
 export const projects = [
+  // {
+  //   title: "projectNgHubTitle",
+  //   description: "projectNgHubDescription",
+  //   image: "/kino.avif", // Не забудь додати скріншот у public або змінити назву
+  //   technologies: ["Next.js", "TypeScript", "SCSS"],
+  //   github: "https://github.com/ljresetl/ng-hub",
+  //   website: "https://ngomega.netlify.app/",
+  //   featured: true,   // ← ПОКАЗАТИ НА ЛЕНДИНГУ
+  // },
+
   {
     title: "projectNgHubTitle",
     description: "projectNgHubDescription",
@@ -12,10 +22,10 @@ export const projects = [
     {
     title: "projectFilmTitle",
     description: "projectFilmDescription",
-    image: "/-6.avif", 
+    image: "/kino.avif", 
     technologies: ["Next.js", "TypeScript", "CSS"],
     github: "https://github.com/ljresetl/moviespace",
-    website: "https://moviespace-qd6p.vercel.app/",
+    website: "https://kinoshrot.com/",
     featured: false,
   },
   {
