@@ -98,22 +98,15 @@
   position: absolute;
   top: 110%;
   right: 0;
-  background: var(--bg);
+  background-color: var(--card-bg-color);
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 10px;
   padding: 6px 0;
   display: flex;
   flex-direction: column;
-  background-color: #256835;
-  z-index: 50;
-
-  &:hover {
-    background-color: #40b822;
-  }
-
-  &.active {
-    background-color: #3a4b3d;
-  }
+  z-index: 100;
+  min-width: 130px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 
   button {
     font-family: var(--font-manrope), sans-serif;
@@ -122,12 +115,82 @@
     border: none;
     text-align: left;
     cursor: pointer;
-    color: var(--text);
+    color: var(--text-color);
+    font-size: 13px;
+    transition: background 0.2s;
 
     &:hover {
-      background: var(--hover);
+      background-color: rgba(0, 0, 0, 0.07);
     }
   }
+}
+
+.activeLang {
+  font-weight: 700;
+  color: var(--accent-color) !important;
+}
+
+/* ============================
+   THEME PICKER
+   ============================ */
+.themeDropdown {
+  position: relative;
+}
+
+.themeColorDot {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  transition: transform 0.2s;
+}
+
+.themeMenu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 6px 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  min-width: 130px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.themeOption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 13px;
+  color: var(--text-color);
+  transition: background 0.2s;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.07);
+  }
+}
+
+.themeSwatchDot {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  flex-shrink: 0;
+}
+
+.activeTheme {
+  font-weight: 700;
+  color: var(--accent-color) !important;
 }
 
 /* ============================

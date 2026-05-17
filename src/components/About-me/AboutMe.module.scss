@@ -7,8 +7,6 @@
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
-  border-left: 1px solid var(--border);
-  border-right: 1px solid var(--border);
 
   .container {
     max-width: 1200px; // Обмеження ширини для десктопа

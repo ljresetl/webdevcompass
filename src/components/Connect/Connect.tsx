@@ -1,13 +1,20 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 import styles from "./Connect.module.scss";
 import { useLanguage } from "@/useLanguage";
 import Section from "@/components/AnimatedScrolSection/AnimatedScrolSection";
 
+const SUPPORTED_LANGS = ["ua", "en", "cz", "de", "fr", "pl", "es", "pt"];
+
 const Connect: React.FC = () => {
   const { t } = useLanguage();
+  const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
+  const urlLang = pathname?.split("/")?.[1] ?? "";
+  const currentLang = SUPPORTED_LANGS.includes(urlLang) ? urlLang : "en";
 
   useEffect(() => {
     // Використовуємо setTimeout, щоб уникнути помилки лінтера про синхронний setState
@@ -47,13 +54,13 @@ const Connect: React.FC = () => {
 
             <p className={styles.connect_container_one_p}>
               <span>{t("navConnectPtwo")}</span>{" "}
-              <a
+              <Link
                 className={styles.connect_span_resume}
-                href="#resume"
-                aria-label="Посилання на резюме"
+                href={`/${currentLang}/resume`}
+                aria-label="Resume page"
               >
                 {t("navConnectR")}
-              </a>
+              </Link>
             </p>
 
             {/* Соцмережі */}
