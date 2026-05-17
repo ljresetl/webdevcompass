@@ -11,59 +11,21 @@ const Experience: React.FC = () => {
     <Section className={`${styles.blur_effect} ${styles.gradient_effect}`}>
       <section className={styles.experience}>
         <div className={styles.container}>
-          
-          {/* Заголовок */}
-          <h3 className={styles.experience_h}>
-            {t("navExperienceH")}
-          </h3>
+          <h2 className={styles.experience_h}>{t("navExperienceH")}</h2>
 
-          {/* Правий блок з текстом */}
           <div className={styles.experience_right}>
-            
-            {/* Верхній блок */}
-            <div className={styles.experience_right_top}>
-              <p className={styles.experience_p}>
-                {t("navExperienceP")}
-              </p>
-              <p className={styles.experience_p_two}>
-                {t("navExperiencePtwo")}
-              </p>
+            <div className={styles.experience_block}>
+              <p className={styles.experience_label}>{t("navExperienceP")}</p>
+              <p className={styles.experience_date}>{t("navExperiencePtwo")}</p>
+              <p className={styles.experience_desc}>{t("navExperiencePthree")}</p>
             </div>
 
-            {/* Окремий абзац */}
-            <p className={styles.experience_p_two_two}>
-              {t("navExperiencePthree")}
-            </p>
-
-            {/* Нижній блок */}
-            <div className={styles.experience_right_down}>
-              <p className={styles.experience_p_three}>
-                {t("navExperiencePfour")}
-              </p>
-              <p className={styles.experience_p_four_four}>
-                {t("navExperiencePsix")}
-              </p>
+            <div className={styles.experience_block}>
+              <p className={styles.experience_label}>{t("navExperiencePfour")}</p>
+              <p className={styles.experience_date}>{t("navExperiencePsix")}</p>
+              <p className={styles.experience_desc}>{t("navExperiencePseven")}</p>
+              <p className={styles.experience_desc}>{t("navExperiencePeight")}</p>
             </div>
-
-            {/* Ще один абзац */}
-            <p className={styles.experience_p_five}>
-              {t("navExperiencePseven")}
-            </p>
-
-            {/* Абзац з посиланням на GoIT */}
-            <p className={styles.experience_p_two}>
-              {t("navExperiencePeight")}{" "}
-              <a
-                href="https://ref.goit.global/5fdde04f"
-                className={styles.goit}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Посилання на GoIT"
-              >
-                GoIT
-              </a>.
-            </p>
-
           </div>
         </div>
       </section>

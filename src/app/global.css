@@ -11,7 +11,7 @@
   --border: #000000;
 }
 
-/* Темна тема (активується класом .dark) */
+/* Темна тема */
 :root.dark,
 body.dark {
   --bg-color: #000000;
@@ -22,6 +22,66 @@ body.dark {
   --color-star: #fff8dc;
   --color-tail: rgba(173, 216, 230, 0.7);
   --border: #ffffff;
+}
+
+/* Ocean тема */
+body.ocean {
+  --bg-color: #050d1a;
+  --card-bg-color: #0a1e35;
+  --text-color: #cce8ff;
+  --accent-color: #0ea5e9;
+  --li-bg-color: #0a1e35be;
+  --color-star: #7ec8e3;
+  --color-tail: rgba(14, 165, 233, 0.5);
+  --border: #1e4a7a;
+}
+
+/* Sunset тема */
+body.sunset {
+  --bg-color: #fffbf5;
+  --card-bg-color: #fff3e0;
+  --text-color: #1c0f00;
+  --accent-color: #f97316;
+  --li-bg-color: #fff3e0be;
+  --color-star: #f59e0b;
+  --color-tail: rgba(249, 115, 22, 0.4);
+  --border: #fdba74;
+}
+
+/* Forest тема */
+body.forest {
+  --bg-color: #071a0c;
+  --card-bg-color: #0d2314;
+  --text-color: #d1fae5;
+  --accent-color: #22c55e;
+  --li-bg-color: #0d2314be;
+  --color-star: #86efac;
+  --color-tail: rgba(34, 197, 94, 0.4);
+  --border: #166534;
+}
+
+/* Midnight тема */
+body.midnight {
+  --bg-color: #060112;
+  --card-bg-color: #100328;
+  --text-color: #ede9fe;
+  --accent-color: #a855f7;
+  --li-bg-color: #100328be;
+  --color-star: #c084fc;
+  --color-tail: rgba(168, 85, 247, 0.4);
+  --border: #5b21b6;
+}
+
+/* Candy тема */
+body.candy {
+  --bg-color: #fdf2f8;
+  --card-bg-color: #fce7f3;
+  --text-color: #1a0520;
+  --accent-color: #ec4899;
+  --li-bg-color: #fce7f3be;
+  --color-star: #f472b6;
+  --color-tail: rgba(236, 72, 153, 0.4);
+  --border: #f9a8d4;
 }
 
 /* === 2. БАЗОВЕ СКИНУТТЯ === */

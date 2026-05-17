@@ -2,6 +2,15 @@
 export const projects = [
 
   {
+    title: "projectFilm1Title",
+    description: "projectFilm1Description",
+    image: "/kino411.webp",
+    technologies: ["Next.js", "TypeScript", "CSS"],
+    github: "https://github.com/ljresetl",
+    website: "https://film1-puce.vercel.app/",
+    featured: true,
+  },
+  {
     title: "projectNgHubTitle",
     description: "projectNgHubDescription",
     image: "/1024 (3).avif", // Не забудь додати скріншот у public або змінити назву
