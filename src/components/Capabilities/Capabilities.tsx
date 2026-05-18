@@ -29,6 +29,7 @@ const Capabilities: React.FC = () => {
         { name: "Figma", url: "https://help.figma.com/hc/en-us" },
         { name: "NPM", url: "https://docs.npmjs.com/" },
         { name: "PostCSS", url: "https://postcss.org/docs/" },
+        { name: "Claude AI", url: "https://claude.ai/" },
       ],
     },
   ];
