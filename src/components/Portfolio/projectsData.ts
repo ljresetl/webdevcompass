@@ -4,7 +4,7 @@ export const projects = [
   {
     title: "projectFilm1Title",
     description: "projectFilm1Description",
-    image: "/kino411.webp",
+    image: "/kino412.webp",
     technologies: ["Next.js", "TypeScript", "CSS"],
     github: "https://github.com/ljresetl",
     website: "https://film1-puce.vercel.app/",
@@ -70,7 +70,7 @@ export const projects = [
     image: "/-1.webp",
     technologies: ["HTML", "CSS", "JS"],
     github: "https://github.com/ljresetl/New-Single-Dj",
-    website: "https://ljresetl.github.io/New-Single-Dj/",
+    website: "https://new-single-dj.vercel.app/",
     featured: false,
   },
   {
