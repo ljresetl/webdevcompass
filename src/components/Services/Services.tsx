@@ -67,6 +67,12 @@ const Services: React.FC = () => {
             <h2>{t("servicePerfTitle")}</h2>
             <p>{t("servicePerfDesc")}</p>
           </Link>
+          {currentLang === "ua" && (
+            <Link href={lp("/services/subscription")} className={styles.card}>
+              <h2>{t("serviceSubTitle")}</h2>
+              <p>{t("serviceSubDesc")}</p>
+            </Link>
+          )}
         </div>
       </div>
     </section>
