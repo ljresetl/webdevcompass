@@ -5,6 +5,13 @@ import { BASE_URL, INDEXNOW_KEY } from "../src/lib/seo";
 import { getAllSiteUrls } from "../src/lib/site-urls";
 
 async function main() {
+  // Vercel виставляє VERCEL_ENV=production лише для продакшн-деплою (не для preview/локальних
+  // білдів). Так локальні `npm run build` під час тестів чи розробки не спамлять IndexNow.
+  if (process.env.VERCEL_ENV !== "production") {
+    console.log("[indexnow] Не продакшн-деплой (VERCEL_ENV !== production) — пропускаю відправку");
+    return;
+  }
+
   const urlList = getAllSiteUrls().map((u) => u.url);
   const host = new URL(BASE_URL).host;
 
