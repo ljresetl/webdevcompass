@@ -3,7 +3,6 @@ import createMDX from "@next/mdx";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  // Дозволяємо AVIF для твого файлу kino.avif
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
