@@ -45,6 +45,17 @@ export const blogPosts: BlogPost[] = [
       { src: "https://picsum.photos/seed/speed-conversion-3/1000/600", alt: "Людина роздратовано дивиться на телефон, що довго завантажується" },
     ],
   },
+  {
+    slug: "seo-link-building-guide",
+    title: "Як правильно будувати SEO-посилання: покроковий гайд",
+    excerpt: "Різниця між dofollow і nofollow, як перевірити посилання просто через браузер, де шукати донорів і посилання конкурентів, чесно про біржі посилань і ризики купівлі, і що має бути готово на сайті ще до старту лінкбілдингу.",
+    date: "2026-09-12",
+    images: [
+      { src: "https://picsum.photos/seed/seo-links-1/1200/630", alt: "Схема мережі посилань між сайтами" },
+      { src: "https://picsum.photos/seed/seo-links-2/1000/600", alt: "Код HTML з атрибутом rel на екрані" },
+      { src: "https://picsum.photos/seed/seo-links-3/1000/600", alt: "Графік аналітики беклінків конкурентів на екрані" },
+    ],
+  },
 ];
 
 blogPosts.forEach((post) => {
