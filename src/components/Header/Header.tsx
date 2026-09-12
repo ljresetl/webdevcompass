@@ -107,6 +107,12 @@ const Header: React.FC = () => {
               <li className={styles.ul_navigation_li}><Link href={lp("/#capabilities")}>{t("navCapabilities")}</Link></li>
               <li className={styles.ul_navigation_li}><Link href={lp("/#portfolio")}>{t("navPortfolio")}</Link></li>
               <li className={styles.ul_navigation_li}><Link href={lp("/services")}>{t("navServices") || "Services"}</Link></li>
+              {currentLang === "ua" && (
+                <>
+                  <li className={styles.ul_navigation_li}><Link href={lp("/blog")}>Блог</Link></li>
+                  <li className={styles.ul_navigation_li}><Link href={lp("/news")}>Новини</Link></li>
+                </>
+              )}
               <li className={styles.ul_navigation_li}><Link href={lp("/resume")}>{t("navResume") || "Resume"}</Link></li>
               <li className={styles.ul_navigation_li}><Link href={lp("/#connect")}>{t("navConnect")}</Link></li>
             </ul>

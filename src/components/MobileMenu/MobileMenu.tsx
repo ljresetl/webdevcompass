@@ -31,6 +31,12 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         <li><Link href={lp("/#capabilities")} onClick={onClose}>{t("navCapabilities")}</Link></li>
         <li><Link href={lp("/#portfolio")} onClick={onClose}>{t("navPortfolio")}</Link></li>
         <li><Link href={lp("/services")} onClick={onClose}>{t("navServices") || "Services"}</Link></li>
+        {currentLang === "ua" && (
+          <>
+            <li><Link href={lp("/blog")} onClick={onClose}>Блог</Link></li>
+            <li><Link href={lp("/news")} onClick={onClose}>Новини</Link></li>
+          </>
+        )}
         <li><Link href={lp("/resume")} onClick={onClose}>{t("navResume") || "Resume"}</Link></li>
         <li><Link href={lp("/#connect")} onClick={onClose}>{t("navConnect")}</Link></li>
       </ul>
