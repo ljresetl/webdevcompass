@@ -17,7 +17,7 @@ export interface NewsItem {
 // словами, з посиланням sourceUrl. Див. CONTENT_GUIDELINES.md.
 export const newsItems: NewsItem[] = [
   {
-    id: "wordpress-critical-vulnerability",
+    id: "krytychna-vrazlyvist-wordpress",
     date: "2026-09-12",
     tag: "Безпека",
     title: "Критична вразливість WordPress — під загрозою сотні мільйонів сайтів",
@@ -30,7 +30,7 @@ export const newsItems: NewsItem[] = [
     sourceUrl: "https://ms.detector.media/internet/post/39390/2026-07-21-khakery-ekspluatuyut-krytychni-vrazlyvosti-wordpress-dlya-zlamu-saytiv-techcrunch/",
   },
   {
-    id: "ai-overviews-ukraine",
+    id: "ai-overviews-v-ukrayini",
     date: "2026-09-12",
     tag: "SEO",
     title: "AI Overviews в Україні: як штучний інтелект забирає трафік із органічного пошуку",
@@ -43,7 +43,7 @@ export const newsItems: NewsItem[] = [
     sourceUrl: "https://www.promodo.ua/blog/ai-overviews-zapustili-v-ukrayini-rozpovidaiemo-yak-pidgotuvatisya",
   },
   {
-    id: "chrome-two-week-updates",
+    id: "chrome-dvotyzhnevi-onovlennya",
     date: "2026-09-12",
     tag: "Технології",
     title: "Chrome переходить на двотижневий цикл оновлень",
@@ -56,7 +56,7 @@ export const newsItems: NewsItem[] = [
     sourceUrl: "https://www.ukrinform.ua/rubric-world/4162467-chrome-zadla-bezpeki-vipuskatime-onovlenna-kozni-dva-tizni.html",
   },
   {
-    id: "chrome-soft-navigations",
+    id: "chrome-shvydkist-spa-saitiv",
     date: "2026-09-12",
     tag: "Продуктивність",
     title: "Chrome навчився правильно вимірювати швидкість SPA-сайтів",
@@ -69,7 +69,7 @@ export const newsItems: NewsItem[] = [
     sourceUrl: "https://developer.chrome.com/blog/final-soft-navigations-origin-trial",
   },
   {
-    id: "google-site-reputation-policy",
+    id: "google-reputatsiya-saitu",
     date: "2026-09-12",
     tag: "SEO",
     title: "Google уточнив правила щодо \"запозиченої репутації\" сайту",
@@ -82,7 +82,7 @@ export const newsItems: NewsItem[] = [
     sourceUrl: "https://developers.google.com/search/blog/2026/08/update-site-reputation-policy",
   },
   {
-    id: "blog-launch",
+    id: "na-saiti-zapratsyuvav-blog",
     date: "2026-09-12",
     tag: "Оновлення сайту",
     title: "На сайті запрацював блог",
@@ -94,7 +94,7 @@ export const newsItems: NewsItem[] = [
     ],
   },
   {
-    id: "alt-tags-seo",
+    id: "chomu-alt-tegy-vazhlyvi",
     date: "2026-09-11",
     tag: "SEO",
     title: "Чому alt-теги для зображень досі важливі",
@@ -106,7 +106,7 @@ export const newsItems: NewsItem[] = [
     ],
   },
   {
-    id: "mobile-traffic",
+    id: "mobilnyi-trafik",
     date: "2026-09-10",
     tag: "Тренди",
     title: "Мобільний трафік продовжує домінувати",

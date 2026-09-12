@@ -13,7 +13,7 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "skilky-koshtuye-landing-page",
+    slug: "skilky-koshtuye-lending",
     title: "Скільки коштує landing page в Україні у 2026 році",
     excerpt: "Від чого залежить ціна лендингу: дизайн, розробка, кількість секцій, інтеграції. Реальні орієнтири по бюджету.",
     date: "2026-08-03",
@@ -24,7 +24,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "business-website-vs-landing-page",
+    slug: "biznes-sait-chy-lending",
     title: "Business website чи landing page — що обрати для бізнесу",
     excerpt: "Різниця між багатосторінковим сайтом компанії та односторінковим лендингом, і як зрозуміти, що потрібно саме вам.",
     date: "2026-08-17",
@@ -46,7 +46,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "seo-link-building-guide",
+    slug: "yak-buduvaty-seo-posylannya",
     title: "Як правильно будувати SEO-посилання: покроковий гайд",
     excerpt: "Різниця між dofollow і nofollow, як перевірити посилання просто через браузер, де шукати донорів і посилання конкурентів, чесно про біржі посилань і ризики купівлі, і що має бути готово на сайті ще до старту лінкбілдингу.",
     date: "2026-09-12",
