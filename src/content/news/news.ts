@@ -8,9 +8,6 @@ export interface NewsItem {
   excerpt: string; // короткий текст для картки в списку
   images: ContentImage[]; // мінімум 3, перше — обкладинка картки/hero на сторінці
   sourceUrl?: string; // першоджерело, якщо новина зовнішня (рендериться з rel="nofollow")
-  // TODO: тимчасова заглушка, поки на сайті немає бази даних для реального лічильника
-  // унікальних переглядів (не ботів). Оновлюйте вручну. Див. CONTENT_GUIDELINES.md.
-  views: number;
 }
 
 // Додавайте нові записи ЗГОРИ масиву (найновіші — перші) + .mdx файл із повним текстом
@@ -30,7 +27,6 @@ export const newsItems: NewsItem[] = [
       { src: "https://picsum.photos/seed/chrome-soft-nav-3/1000/600", alt: "Графік швидкодії сайту в інструментах розробника" },
     ],
     sourceUrl: "https://developer.chrome.com/blog/final-soft-navigations-origin-trial",
-    views: 214,
   },
   {
     id: "google-site-reputation-policy",
@@ -44,7 +40,6 @@ export const newsItems: NewsItem[] = [
       { src: "https://picsum.photos/seed/site-reputation-3/1000/600", alt: "Карта Європи символізує регіональні правила" },
     ],
     sourceUrl: "https://developers.google.com/search/blog/2026/08/update-site-reputation-policy",
-    views: 189,
   },
   {
     id: "blog-launch",
@@ -57,7 +52,6 @@ export const newsItems: NewsItem[] = [
       { src: "https://picsum.photos/seed/blog-launch-2/1000/600", alt: "Екран із заголовком нової статті блогу" },
       { src: "https://picsum.photos/seed/blog-launch-3/1000/600", alt: "Робочий стіл з ноутбуком і нотатками" },
     ],
-    views: 97,
   },
   {
     id: "alt-tags-seo",
@@ -70,7 +64,6 @@ export const newsItems: NewsItem[] = [
       { src: "https://picsum.photos/seed/alt-tags-2/1000/600", alt: "Код HTML з атрибутом alt на екрані" },
       { src: "https://picsum.photos/seed/alt-tags-3/1000/600", alt: "Людина користується скрінрідером на комп'ютері" },
     ],
-    views: 156,
   },
   {
     id: "mobile-traffic",
@@ -83,7 +76,6 @@ export const newsItems: NewsItem[] = [
       { src: "https://picsum.photos/seed/mobile-traffic-2/1000/600", alt: "Кілька мобільних екранів з адаптивним дизайном" },
       { src: "https://picsum.photos/seed/mobile-traffic-3/1000/600", alt: "Графік зростання мобільного трафіку" },
     ],
-    views: 132,
   },
 ];
 

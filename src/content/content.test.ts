@@ -74,12 +74,6 @@ describe("newsItems", () => {
     }
   });
 
-  it("has a non-negative views count", () => {
-    for (const item of newsItems) {
-      expect(item.views).toBeGreaterThanOrEqual(0);
-    }
-  });
-
   it(`has a corresponding .mdx file of at least ${MIN_ARTICLE_LENGTH} characters for every item`, () => {
     for (const item of newsItems) {
       const file = path.join(__dirname, "news", `${item.id}.mdx`);
