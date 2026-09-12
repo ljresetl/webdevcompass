@@ -14,16 +14,17 @@ interface Check {
   path: string;
   expectStatus: number;
   expectContains?: string;
+  expectNotContains?: string;
 }
 
 const checks: Check[] = [
   ...SUPPORTED_LANGS.map((lang) => ({ path: `/${lang}`, expectStatus: 200 })),
-  { path: "/ua/services", expectStatus: 200 },
-  { path: "/ua/services/subscription", expectStatus: 200 },
+  { path: "/ua/services", expectStatus: 200, expectContains: 'aria-label="Select language"' },
+  { path: "/ua/services/subscription", expectStatus: 200, expectNotContains: 'aria-label="Select language"' },
   { path: "/en/services/subscription", expectStatus: 404 },
-  { path: "/ua/blog", expectStatus: 200, expectContains: "Блог" },
+  { path: "/ua/blog", expectStatus: 200, expectContains: "Блог", expectNotContains: 'aria-label="Select language"' },
   { path: "/en/blog", expectStatus: 404 },
-  { path: "/ua/news", expectStatus: 200, expectContains: "Новини" },
+  { path: "/ua/news", expectStatus: 200, expectContains: "Новини", expectNotContains: 'aria-label="Select language"' },
   { path: "/en/news", expectStatus: 404 },
   { path: "/sitemap.xml", expectStatus: 200, expectContains: "<urlset" },
   { path: "/robots.txt", expectStatus: 200, expectContains: "Sitemap:" },
@@ -73,20 +74,23 @@ async function runChecks(): Promise<boolean> {
     const res = await fetch(`${BASE}${check.path}`);
     const statusOk = res.status === check.expectStatus;
     let containsOk = true;
+    let notContainsOk = true;
     let body = "";
 
-    if (check.expectContains) {
+    if (check.expectContains || check.expectNotContains) {
       body = decodeHtmlEntities(await res.text());
-      containsOk = body.includes(check.expectContains);
+      if (check.expectContains) containsOk = body.includes(check.expectContains);
+      if (check.expectNotContains) notContainsOk = !body.includes(check.expectNotContains);
     }
 
-    if (statusOk && containsOk) {
+    if (statusOk && containsOk && notContainsOk) {
       console.log(`  OK   ${check.path} (${res.status})`);
     } else {
       allPassed = false;
       console.error(`  FAIL ${check.path}`);
       if (!statusOk) console.error(`       очікував статус ${check.expectStatus}, отримав ${res.status}`);
       if (!containsOk) console.error(`       очікував текст "${check.expectContains}" у відповіді, не знайдено`);
+      if (!notContainsOk) console.error(`       не мало бути тексту "${check.expectNotContains}" у відповіді, але він є`);
     }
   }
 

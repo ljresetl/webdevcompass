@@ -50,6 +50,16 @@ const Header: React.FC = () => {
   const currentLang: Lang = SUPPORTED_LANGS.includes(urlLang) ? (urlLang as Lang) : "en";
   const lp = (path: string) => `/${currentLang}${path}`;
 
+  // Блог, новини й підписка існують лише українською — перемикання мови там
+  // веде на 404 для будь-якої іншої мови, тому сам перемикач на цих сторінках ховаємо.
+  const pathAfterLang = "/" + pathname.split("/").slice(2).join("/");
+  const isUaOnlyPage =
+    pathAfterLang === "/blog" ||
+    pathAfterLang.startsWith("/blog/") ||
+    pathAfterLang === "/news" ||
+    pathAfterLang.startsWith("/news/") ||
+    pathAfterLang === "/services/subscription";
+
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
     return () => { document.body.style.overflow = "auto"; };
@@ -118,20 +128,22 @@ const Header: React.FC = () => {
             </ul>
           </nav>
 
-          <div className={styles.languageDropdown} ref={langRef}>
-            <button className={styles.language_switcher_button} onClick={() => setIsLangOpen(p => !p)} aria-label="Select language">
-              🌐 {currentLang.toUpperCase()}
-            </button>
-            {isLangOpen && (
-              <div className={styles.languageMenu}>
-                {LANGUAGES.map(({ code, label }) => (
-                  <button key={code} onClick={() => switchLanguage(code)} className={currentLang === code ? styles.activeLang : ""}>
-                    {label}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
+          {!isUaOnlyPage && (
+            <div className={styles.languageDropdown} ref={langRef}>
+              <button className={styles.language_switcher_button} onClick={() => setIsLangOpen(p => !p)} aria-label="Select language">
+                🌐 {currentLang.toUpperCase()}
+              </button>
+              {isLangOpen && (
+                <div className={styles.languageMenu}>
+                  {LANGUAGES.map(({ code, label }) => (
+                    <button key={code} onClick={() => switchLanguage(code)} className={currentLang === code ? styles.activeLang : ""}>
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
 
           <div className={styles.themeDropdown} ref={themeRef}>
             <button className={styles.theme_switcher} onClick={() => setIsThemeOpen(p => !p)} aria-label="Choose theme">
