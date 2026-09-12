@@ -50,13 +50,6 @@ export default async function NewsPostPage({ params }: Props) {
           <span className={styles.date}>
             {new Date(item.date).toLocaleDateString("uk-UA", { year: "numeric", month: "long", day: "numeric" })}
           </span>
-          <span className={styles.views}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-              <circle cx="12" cy="12" r="3" />
-            </svg>
-            {item.views}
-          </span>
         </div>
 
         <h1 className={styles.title}>{item.title}</h1>

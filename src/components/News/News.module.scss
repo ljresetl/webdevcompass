@@ -125,17 +125,6 @@
   opacity: 0.6;
 }
 
-.views {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 13px;
-  opacity: 0.6;
-
-  svg {
-    fill: none;
-  }
-}
 
 .cardTitle {
   font-family: var(--font-montserrat), sans-serif;
