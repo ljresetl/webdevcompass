@@ -65,5 +65,14 @@ export function getAllSiteUrls(): SiteUrl[] {
     });
   }
 
+  for (const item of newsItems) {
+    urls.push({
+      url: `${BASE_URL}/ua/news/${item.id}`,
+      lastModified: item.date,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    });
+  }
+
   return urls;
 }

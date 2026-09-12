@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import styles from "./News.module.scss";
 import { newsItems } from "@/content/news/news";
@@ -15,41 +16,35 @@ const News: React.FC = () => {
 
         <div className={styles.list}>
           {sorted.map((item) => (
-            <article key={item.id} className={styles.item}>
-              <div className={styles.itemImageWrap}>
+            <Link key={item.id} href={`/ua/news/${item.id}`} className={styles.card}>
+              <div className={styles.cardImageWrap}>
                 <Image
                   src={item.images[0].src}
                   alt={item.images[0].alt}
                   fill
-                  sizes="(min-width: 640px) 220px, 100vw"
-                  className={styles.itemImage}
+                  sizes="(min-width: 900px) 380px, 100vw"
+                  className={styles.cardImage}
                 />
               </div>
-              <div className={styles.itemBody}>
-                <div className={styles.itemHead}>
+              <div className={styles.cardBody}>
+                <div className={styles.cardHead}>
                   <span className={styles.tag}>{item.tag}</span>
                   <span className={styles.date}>
                     {new Date(item.date).toLocaleDateString("uk-UA", { year: "numeric", month: "long", day: "numeric" })}
                   </span>
+                  <span className={styles.views}>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                      <circle cx="12" cy="12" r="3" />
+                    </svg>
+                    {item.views}
+                  </span>
                 </div>
-                <h2 className={styles.itemTitle}>{item.title}</h2>
-                <p className={styles.itemText}>{item.body}</p>
-
-                <div className={styles.thumbRow}>
-                  {item.images.slice(1).map((img, i) => (
-                    <div key={i} className={styles.thumbWrap}>
-                      <Image src={img.src} alt={img.alt} fill sizes="80px" className={styles.thumb} />
-                    </div>
-                  ))}
-                </div>
-
-                {item.sourceUrl && (
-                  <a href={item.sourceUrl} target="_blank" rel="nofollow noopener noreferrer" className={styles.source}>
-                    Джерело →
-                  </a>
-                )}
+                <h2 className={styles.cardTitle}>{item.title}</h2>
+                <p className={styles.excerpt}>{item.excerpt}</p>
+                <span className={styles.readMore}>Читати повністю →</span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

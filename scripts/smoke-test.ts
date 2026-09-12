@@ -4,6 +4,7 @@
 import { spawn, execSync, ChildProcess } from "node:child_process";
 import { existsSync } from "node:fs";
 import { blogPosts } from "../src/content/blog/posts";
+import { newsItems } from "../src/content/news/news";
 import { SUPPORTED_LANGS } from "../src/lib/site-urls";
 
 const PORT = 3399;
@@ -27,6 +28,8 @@ const checks: Check[] = [
   { path: "/sitemap.xml", expectStatus: 200, expectContains: "<urlset" },
   { path: "/robots.txt", expectStatus: 200, expectContains: "Sitemap:" },
   ...blogPosts.map((post) => ({ path: `/ua/blog/${post.slug}`, expectStatus: 200, expectContains: post.title })),
+  ...newsItems.map((item) => ({ path: `/ua/news/${item.id}`, expectStatus: 200, expectContains: item.title })),
+  { path: "/en/news/chrome-soft-navigations", expectStatus: 404 },
 ];
 
 function waitForServer(proc: ChildProcess, timeoutMs = 30000): Promise<void> {
@@ -54,6 +57,15 @@ function waitForServer(proc: ChildProcess, timeoutMs = 30000): Promise<void> {
   });
 }
 
+function decodeHtmlEntities(text: string): string {
+  return text
+    .replace(/&quot;/g, '"')
+    .replace(/&#x27;/g, "'")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">");
+}
+
 async function runChecks(): Promise<boolean> {
   let allPassed = true;
 
@@ -64,7 +76,7 @@ async function runChecks(): Promise<boolean> {
     let body = "";
 
     if (check.expectContains) {
-      body = await res.text();
+      body = decodeHtmlEntities(await res.text());
       containsOk = body.includes(check.expectContains);
     }
 

@@ -3,7 +3,9 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "@/components/Blog/BlogPost.module.scss";
+import ShareButtons from "@/components/Share/ShareButtons";
 import { blogPosts } from "@/content/blog/posts";
+import { BASE_URL } from "@/lib/seo";
 
 type Props = { params: Promise<{ lang: string; slug: string }> };
 
@@ -51,6 +53,8 @@ export default async function BlogPostPage({ params }: Props) {
         <div className={styles.content}>
           <Post />
         </div>
+
+        <ShareButtons url={`${BASE_URL}/ua/blog/${slug}`} title={post.title} />
       </div>
     </section>
   );
