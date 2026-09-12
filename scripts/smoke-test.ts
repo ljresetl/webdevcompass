@@ -29,7 +29,7 @@ const checks: Check[] = [
   { path: "/robots.txt", expectStatus: 200, expectContains: "Sitemap:" },
   ...blogPosts.map((post) => ({ path: `/ua/blog/${post.slug}`, expectStatus: 200, expectContains: post.title })),
   ...newsItems.map((item) => ({ path: `/ua/news/${item.id}`, expectStatus: 200, expectContains: item.title })),
-  { path: "/en/news/chrome-soft-navigations", expectStatus: 404 },
+  { path: "/en/news/chrome-shvydkist-spa-saitiv", expectStatus: 404 },
 ];
 
 function waitForServer(proc: ChildProcess, timeoutMs = 30000): Promise<void> {
