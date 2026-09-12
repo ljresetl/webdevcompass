@@ -13,6 +13,11 @@ describe("blogPosts", () => {
     expect(new Set(slugs).size).toBe(slugs.length);
   });
 
+  it("has no duplicate titles (CONTENT_GUIDELINES.md: no duplicate content)", () => {
+    const titles = blogPosts.map((p) => p.title.trim().toLowerCase());
+    expect(new Set(titles).size).toBe(titles.length);
+  });
+
   it("gives every post at least 3 images with alt text (CONTENT_GUIDELINES.md)", () => {
     for (const post of blogPosts) {
       expect(post.images.length, `"${post.slug}" has too few images`).toBeGreaterThanOrEqual(3);
@@ -41,6 +46,16 @@ describe("newsItems", () => {
   it("has unique ids", () => {
     const ids = newsItems.map((n) => n.id);
     expect(new Set(ids).size).toBe(ids.length);
+  });
+
+  it("has no duplicate titles (CONTENT_GUIDELINES.md: no duplicate content)", () => {
+    const titles = newsItems.map((n) => n.title.trim().toLowerCase());
+    expect(new Set(titles).size).toBe(titles.length);
+  });
+
+  it("has no duplicate sourceUrl (the same story shouldn't be covered twice)", () => {
+    const sourceUrls = newsItems.map((n) => n.sourceUrl).filter((url): url is string => Boolean(url));
+    expect(new Set(sourceUrls).size).toBe(sourceUrls.length);
   });
 
   it("gives every item at least 3 images with alt text (CONTENT_GUIDELINES.md)", () => {
@@ -83,5 +98,12 @@ describe("newsItems", () => {
         MIN_ARTICLE_LENGTH
       );
     }
+  });
+});
+
+describe("blogPosts and newsItems combined", () => {
+  it("has no duplicate title between a blog post and a news item (same story shouldn't be published twice)", () => {
+    const titles = [...blogPosts.map((p) => p.title), ...newsItems.map((n) => n.title)].map((t) => t.trim().toLowerCase());
+    expect(new Set(titles).size).toBe(titles.length);
   });
 });
