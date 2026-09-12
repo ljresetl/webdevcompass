@@ -16,6 +16,45 @@ export interface NewsItem {
 // (не завжди одне й те саме), переказ власними словами, з посиланням sourceUrl.
 export const newsItems: NewsItem[] = [
   {
+    id: "wordpress-critical-vulnerability",
+    date: "2026-09-12",
+    tag: "Безпека",
+    title: "Критична вразливість WordPress — під загрозою сотні мільйонів сайтів",
+    excerpt: "Дослідники кібербезпеки зафіксували масову експлуатацію вразливостей у WordPress 6.9.0-6.9.4 та 7.0.0-7.0.1. WordPress випустив патч і навіть застосував примусові оновлення — але мільйони сайтів досі не оновлені.",
+    images: [
+      { src: "https://picsum.photos/seed/wp-vuln-1/1200/630", alt: "Замок на фоні коду символізує вразливість у безпеці сайту" },
+      { src: "https://picsum.photos/seed/wp-vuln-2/1000/600", alt: "Екран з кодом і повідомленням про помилку безпеки" },
+      { src: "https://picsum.photos/seed/wp-vuln-3/1000/600", alt: "Закритий навісний замок на фоні коду символізує захист сайту" },
+    ],
+    sourceUrl: "https://ms.detector.media/internet/post/39390/2026-07-21-khakery-ekspluatuyut-krytychni-vrazlyvosti-wordpress-dlya-zlamu-saytiv-techcrunch/",
+  },
+  {
+    id: "ai-overviews-ukraine",
+    date: "2026-09-12",
+    tag: "SEO",
+    title: "AI Overviews в Україні: як штучний інтелект забирає трафік із органічного пошуку",
+    excerpt: "AI Overviews вже давно не експеримент для української аудиторії Google — CTR першого органічного результату падає приблизно на третину, коли з'являється цей блок. Розбираємо цифри і що з цим робити бізнесу.",
+    images: [
+      { src: "https://picsum.photos/seed/ai-overviews-1/1200/630", alt: "Екран пошукової системи з блоком AI-відповіді" },
+      { src: "https://picsum.photos/seed/ai-overviews-2/1000/600", alt: "Смартфон з результатами пошуку Google на екрані" },
+      { src: "https://picsum.photos/seed/ai-overviews-3/1000/600", alt: "Графік падіння трафіку на екрані аналітики" },
+    ],
+    sourceUrl: "https://www.promodo.ua/blog/ai-overviews-zapustili-v-ukrayini-rozpovidaiemo-yak-pidgotuvatisya",
+  },
+  {
+    id: "chrome-two-week-updates",
+    date: "2026-09-12",
+    tag: "Технології",
+    title: "Chrome переходить на двотижневий цикл оновлень",
+    excerpt: "Починаючи з Chrome 153, Google скорочує цикл випуску оновлень браузера з чотирьох до двох тижнів заради швидшої реакції на вразливості. Що це означає для тестування сайтів і нових CSS/JS-можливостей.",
+    images: [
+      { src: "https://picsum.photos/seed/chrome-two-week-1/1200/630", alt: "Логотип браузера Chrome на екрані смартфона" },
+      { src: "https://picsum.photos/seed/chrome-two-week-2/1000/600", alt: "Іконка браузера Chrome на екрані ноутбука" },
+      { src: "https://picsum.photos/seed/chrome-two-week-3/1000/600", alt: "Календар з позначеними датами оновлень" },
+    ],
+    sourceUrl: "https://www.ukrinform.ua/rubric-world/4162467-chrome-zadla-bezpeki-vipuskatime-onovlenna-kozni-dva-tizni.html",
+  },
+  {
     id: "chrome-soft-navigations",
     date: "2026-09-12",
     tag: "Продуктивність",
