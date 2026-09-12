@@ -130,7 +130,7 @@ img {
 
 /* === 3. НАЛАШТУВАННЯ NEXT.JS (SCROLL) === */
 html {
-  /* Прибрали scroll-behavior, щоб не було помилки в консолі */
+  scroll-behavior: smooth;
   scroll-padding-top: 20px;
 }
 
