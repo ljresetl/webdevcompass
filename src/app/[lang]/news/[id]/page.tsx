@@ -25,6 +25,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: item.excerpt,
     alternates: { canonical: `${BASE_URL}/${lang}/news/${id}` },
     openGraph: { title: item.title, description: item.excerpt, url: `${BASE_URL}/${lang}/news/${id}`, siteName: "WebDevCompass", type: "article", images: [item.images[0].src] },
+    // Next.js не домержовує openGraph/twitter з батьківського layout.tsx — без цього
+    // поля X/Twitter показував би загальну картинку сайту замість фото новини.
+    twitter: { card: "summary_large_image", title: item.title, description: item.excerpt, images: [item.images[0].src] },
   };
 }
 
