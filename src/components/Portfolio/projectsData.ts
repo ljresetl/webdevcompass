@@ -19,15 +19,6 @@ export const projects = [
     website: "https://ngomega.netlify.app/",
     featured: true,   // ← ПОКАЗАТИ НА ЛЕНДИНГУ
   },
-    {
-    title: "projectFilmTitle",
-    description: "projectFilmDescription",
-    image: "/kino.avif", 
-    technologies: ["Next.js", "TypeScript", "CSS"],
-    github: "https://github.com/ljresetl/moviespace",
-    website: "https://kinoshrot.com/",
-    featured: true,
-  },
   {
     title: "projectAmondrexTitle",
     description: "projectAmondrexDescription",

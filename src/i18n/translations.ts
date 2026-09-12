@@ -6,8 +6,6 @@ export interface TranslationKeys {
 
 export const translations: Record<Lang, TranslationKeys> = {
   ua: {
-    "projectFilmTitle": "Онлайн кінотеатр",
-    "projectFilmDescription": "Сайт для перегляду фільмів онлайн українською мовою, створений з використанням Next.js та TypeScript.",
     "bannerSubtitle": "WebDevCompass — розробка сайтів під ключ на Next.js та TypeScript",
     "projectNgHubTitle": "NG Consulting",
 "projectNgHubDescription": "Сайт для створення та просування ваших інтернет проектів",
@@ -408,8 +406,6 @@ navExperiencePeight: "Постійно вдосконалюємо навички
   },
 
   en: {
-    "projectFilmTitle": "Online Cinema",
-  "projectFilmDescription": "A website for watching movies online in Ukrainian, built with Next.js and TypeScript.",
     "bannerSubtitle": "WebDevCompass — full-cycle Next.js & TypeScript web development",
     "projectNgHubTitle": "NG Consulting",
 "projectNgHubDescription": "A website for creating and promoting your online projects",
@@ -710,8 +706,6 @@ navExperiencePeight: "We constantly improve our skills and stay up to date with 
   },
 
   cz: {
-    "projectFilmTitle": "Online kino",
-  "projectFilmDescription": "Webová stránka pro sledování filmů online v ukrajinštině, vytvořená pomocí Next.js a TypeScriptu.",
     "bannerSubtitle": "WebDevCompass — vývoj webů na klíč v Next.js a TypeScriptu",
     "projectNgHubTitle": "NG Consulting",
 "projectNgHubDescription": "Web pro tvorbu a propagaci vašich internetových projektů",
@@ -1071,7 +1065,6 @@ navExperiencePeight: "Neustále zdokonalujeme naše dovednosti a sledujeme nejno
     projectYachtsTitle: "Yachten", projectYachtsDescription: "Website für Luxusyachtvermietung.",
     projectWeatherTitle: "Wetter-Website", projectWeatherDescription: "Web-App für Wettervorhersage.",
     projectSWESTitle: "SWES Reservierungsmodul", projectSWESDescription: "Buchungs- und Verwaltungsinterface.",
-    projectFilmTitle: "Online-Kino", projectFilmDescription: "Film-Website mit Next.js und TypeScript.",
     projectNgHubTitle: "NG Consulting", projectNgHubDescription: "Website zur Förderung von Online-Projekten.",
     projectFilm1Title: "Film1 — Kinoplattform", projectFilm1Description: "Moderne Kinoplattform mit Next.js und TypeScript.",
     servicesTitle: "Dienste", servicesSubtitle: "Schnelle, moderne und skalierbare Websites mit sauberer Architektur.",
@@ -1222,7 +1215,6 @@ navExperiencePeight: "Neustále zdokonalujeme naše dovednosti a sledujeme nejno
     projectYachtsTitle: "Yachts", projectYachtsDescription: "Location de yachts de luxe.",
     projectWeatherTitle: "Site météo", projectWeatherDescription: "App de prévision météo.",
     projectSWESTitle: "Module SWES", projectSWESDescription: "Interface de réservation et gestion.",
-    projectFilmTitle: "Cinéma en ligne", projectFilmDescription: "Site cinéma avec Next.js et TypeScript.",
     projectNgHubTitle: "NG Consulting", projectNgHubDescription: "Site pour promouvoir des projets en ligne.",
     projectFilm1Title: "Film1 — Plateforme cinéma", projectFilm1Description: "Plateforme cinéma moderne avec Next.js et TypeScript.",
     servicesTitle: "Services", servicesSubtitle: "Sites web rapides, modernes et évolutifs.",
@@ -1374,7 +1366,6 @@ navExperiencePeight: "Neustále zdokonalujeme naše dovednosti a sledujeme nejno
     projectYachtsTitle: "Jachty", projectYachtsDescription: "Wynajem luksusowych jachtów.",
     projectWeatherTitle: "Strona pogodowa", projectWeatherDescription: "Aplikacja prognozy pogody.",
     projectSWESTitle: "Moduł SWES", projectSWESDescription: "Interfejs rezerwacji i zarządzania.",
-    projectFilmTitle: "Kino online", projectFilmDescription: "Strona filmowa z Next.js i TypeScript.",
     projectNgHubTitle: "NG Consulting", projectNgHubDescription: "Strona do promocji projektów internetowych.",
     projectFilm1Title: "Film1 — Platforma kinowa", projectFilm1Description: "Nowoczesna platforma kinowa z Next.js i TypeScript.",
     servicesTitle: "Usługi", servicesSubtitle: "Szybkie, nowoczesne i skalowalne strony internetowe.",
@@ -1526,7 +1517,6 @@ navExperiencePeight: "Neustále zdokonalujeme naše dovednosti a sledujeme nejno
     projectYachtsTitle: "Yates", projectYachtsDescription: "Alquiler de yates de lujo.",
     projectWeatherTitle: "Sitio del tiempo", projectWeatherDescription: "App de pronóstico del tiempo.",
     projectSWESTitle: "Módulo SWES", projectSWESDescription: "Interfaz de reservas y gestión.",
-    projectFilmTitle: "Cine en línea", projectFilmDescription: "Sitio de cine con Next.js y TypeScript.",
     projectNgHubTitle: "NG Consulting", projectNgHubDescription: "Sitio para promover proyectos en línea.",
     projectFilm1Title: "Film1 — Plataforma de cine", projectFilm1Description: "Plataforma de cine moderna con Next.js y TypeScript.",
     servicesTitle: "Servicios", servicesSubtitle: "Sitios web rápidos, modernos y escalables.",
@@ -1678,7 +1668,6 @@ navExperiencePeight: "Neustále zdokonalujeme naše dovednosti a sledujeme nejno
     projectYachtsTitle: "Iates", projectYachtsDescription: "Aluguel de iates de luxo.",
     projectWeatherTitle: "Site de clima", projectWeatherDescription: "App de previsão do tempo.",
     projectSWESTitle: "Módulo SWES", projectSWESDescription: "Interface de reservas e gestão.",
-    projectFilmTitle: "Cinema online", projectFilmDescription: "Site de cinema com Next.js e TypeScript.",
     projectNgHubTitle: "NG Consulting", projectNgHubDescription: "Site para promover projetos online.",
     projectFilm1Title: "Film1 — Plataforma de cinema", projectFilm1Description: "Plataforma de cinema moderna com Next.js e TypeScript.",
     servicesTitle: "Serviços", servicesSubtitle: "Sites rápidos, modernos e escaláveis.",
