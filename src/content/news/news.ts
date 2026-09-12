@@ -17,19 +17,6 @@ export interface NewsItem {
 // словами, з посиланням sourceUrl. Див. CONTENT_GUIDELINES.md.
 export const newsItems: NewsItem[] = [
   {
-    id: "seo-link-building-guide",
-    date: "2026-09-12",
-    tag: "SEO",
-    title: "Як правильно будувати SEO-посилання: покроковий гайд",
-    excerpt: "Різниця між dofollow і nofollow, як перевірити посилання просто через браузер, де шукати донорів і посилання конкурентів, чесно про біржі посилань і ризики купівлі, і що має бути готово на сайті ще до старту лінкбілдингу.",
-    images: [
-      { src: "https://picsum.photos/seed/seo-links-1/1200/630", alt: "Схема мережі посилань між сайтами" },
-      { src: "https://picsum.photos/seed/seo-links-2/1000/600", alt: "Код HTML з атрибутом rel на екрані" },
-      { src: "https://picsum.photos/seed/seo-links-3/1000/600", alt: "Графік аналітики беклінків конкурентів на екрані" },
-    ],
-    sourceUrl: "https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links",
-  },
-  {
     id: "wordpress-critical-vulnerability",
     date: "2026-09-12",
     tag: "Безпека",
