@@ -17,6 +17,32 @@ export interface NewsItem {
 // словами, з посиланням sourceUrl. Див. CONTENT_GUIDELINES.md.
 export const newsItems: NewsItem[] = [
   {
+    id: "ukrainski-startapy-techcrunch-disrupt-2026",
+    date: "2026-09-22",
+    tag: "Стартапи",
+    title: "9 українських стартапів представлять країну на TechCrunch Disrupt 2026",
+    excerpt: "Український фонд стартапів відібрав дев'ять компаній — від оборонних технологій до агротеху — для участі в одній із найбільших технологічних конференцій світу в Сан-Франциско.",
+    images: [
+      { src: "https://picsum.photos/seed/techcrunch-ua-1/1200/630", alt: "Прапор України на фоні хмарочосів технологічного міста" },
+      { src: "https://picsum.photos/seed/techcrunch-ua-2/1000/600", alt: "Дрон над полем символізує геопросторові технології" },
+      { src: "https://picsum.photos/seed/techcrunch-ua-3/1000/600", alt: "Презентація стартапу перед аудиторією на технологічній конференції" },
+    ],
+    sourceUrl: "https://dou.ua/lenta/news/who-will-visit-techcrunch-2026/",
+  },
+  {
+    id: "chrome-devtools-152-onovlennya",
+    date: "2026-09-22",
+    tag: "Технології",
+    title: "Chrome DevTools 152: нові інструменти для мереж, елементів і продуктивності",
+    excerpt: "Панель Network отримала функцію Resend замість Replay XHR, Elements — значки кастомних елементів, а Live Metrics нарешті бачать Core Web Vitals для переходів у SPA.",
+    images: [
+      { src: "https://picsum.photos/seed/devtools-152-1/1200/630", alt: "Інтерфейс Chrome DevTools на екрані ноутбука" },
+      { src: "https://picsum.photos/seed/devtools-152-2/1000/600", alt: "Панель мережевих запитів у Chrome DevTools" },
+      { src: "https://picsum.photos/seed/devtools-152-3/1000/600", alt: "Графік метрик продуктивності сторінки в реальному часі" },
+    ],
+    sourceUrl: "https://developer.chrome.com/blog/new-in-devtools-152",
+  },
+  {
     id: "krytychna-vrazlyvist-wordpress",
     date: "2026-09-12",
     tag: "Безпека",
